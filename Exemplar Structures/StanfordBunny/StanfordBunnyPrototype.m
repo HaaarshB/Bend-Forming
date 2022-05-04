@@ -1,8 +1,8 @@
 clc
 clearvars
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Fabrication Algorithms")
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\MeshTools")
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\MeshTools\jsonlab-master")
+addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Mesh Tools")
+addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Mesh Tools\jsonlab-master")
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\StanfordBunny\BunnyMeshes")
 
 %% Load low-poly bunny from OBJ file
