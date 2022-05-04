@@ -1,5 +1,6 @@
 clc
 clearvars
+addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Fabrication Algorithms")
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\CurvedGridshell\WithoutAngularDefects")
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Mesh Tools\distmesh")
 
@@ -19,7 +20,7 @@ pos2d = coords;
 pos2d(:,3) = 0;
 pos = coords;
 pos(:,3) = zeros(size(pos,1),1);
-pos(:,3) = pos(:,1).^2/(4*F) + pos(:,2).^2/(4*F); % comment this line for flat dish instead of curved dish
+% pos(:,3) = pos(:,1).^2/(4*F) + pos(:,2).^2/(4*F); % comment this line for flat dish instead of curved dish
 
 % Transform patched surface into a graph
 edgepairs = zeros(2,3*size(faces,1));
@@ -51,9 +52,9 @@ time = toc;
 % Plot solution to CPP algorithm
 % plotbendpath(geuler,eulerpath,pos,0.2,1,10,"C:\Users\harsh\Desktop\FabTesting\Dish\dishcurvedbendpathvideo_top_fast.avi",[0,90])
 % plotbendpath(geuler,eulerpath,pos,0.2,1,10,"C:\Users\harsh\Desktop\FabTesting\Dish\dishcurvedbendpathvideo_side_fast.avi",[-90,20])
-plotbendpath(geuler,eulerpath,pos,0.2)
+% plotbendpath(geuler,eulerpath,pos,0.05)
 plotgreenarrows(geuler,eulerpath,pos,4,15,[0 90])
-plotblacksvg(eulerpath,pos,4,[0 90])
+plotblacksvg(eulerpath,pos,2,[0 90])
 
 %% Output to DI wire 
 % MachineInstructions(eulerpath,pos,"C:\Users\harsh\Desktop\FabTesting\Dish\dishcurved.txt",1,1)
