@@ -2,7 +2,7 @@ clc
 clearvars
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Fabrication Algorithms")
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\TrussHoop")
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\MeshTools\distmesh")
+addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Mesh Tools\distmesh")
 
 %% Paraboloid dish
 % % QUARTER SIZE
