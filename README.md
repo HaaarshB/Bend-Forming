@@ -6,4 +6,3 @@
 # See the exemplar structures folder for examples of prototypes made with Bend-Forming
 
 # © Copyright 2022
-
