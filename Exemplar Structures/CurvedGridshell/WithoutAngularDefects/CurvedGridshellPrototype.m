@@ -1,7 +1,7 @@
 clc
 clearvars
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\CurvedGridshell\WithoutAngularDefects")
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\MeshTools\distmesh")
+addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Mesh Tools\distmesh")
 
 %% Paraboloid dish
 D = 350; % Diameter
