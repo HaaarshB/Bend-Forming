@@ -1,4 +1,4 @@
-Bend-Forming is a deformation process for fabricating trusses from continuous wire feedstock, with application to manufacturing in space.
+Bend-Forming is a deformation process for fabricating trusses from a spool of wire feedstock, with application to manufacturing large structures in space.
 
 This repository contains fabrication algorithms for the Bend-Forming process, developed by Harsh Bhundiya at MIT AeroAstro. 
 See the "Exemplar Structures" folder for examples of prototypes made with the process.
