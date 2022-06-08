@@ -3,6 +3,7 @@ clearvars
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Fabrication Algorithms")
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\TrussHoop")
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Mesh Tools\distmesh")
+addpath("C:\Users\harsh\Desktop\Mesh Reflector\JulyPrototype")
 
 %% Paraboloid dish
 % % QUARTER SIZE
@@ -63,7 +64,8 @@ Nouter = 24; % number of polygonal sides in torus, set to 1 for normal hoop with
 Ninner = 3; % number of polygonal sides in column cross setion
 Nbay = 1; % sidelengths along circumference
 
-[ghoop,poshoop,shoop,thoop] = polyaltdiagtrusstorusFLATgraph3D(Rinner,Router,Ninner,Nouter,Nbay);
+% [ghoop,poshoop,shoop,thoop] = polyaltdiagtrusstorusFLATgraph3D(Rinner,Router,Ninner,Nouter,Nbay);
+[ghoop,poshoop,shoop,thoop] = newhoopcrosssection(Rinner,Router,Ninner,Nouter,Nbay);
 avgbaysidelength(poshoop,Ninner);
 
 % Move hoop up to match max z-coordinate of dish
@@ -202,8 +204,8 @@ vidangle=[-45,45];
 plotmultibendpath(gstruct,pathstruct,posstruct,[0.01,0.05],savevideo,framerate,filename,vidangle)
 
 %% Plot green arrows
-plotgreenarrows(ghoop,bendpathhoop,poshoop,3,15,[-60,60])
-plotgreenarrows(gcommandeuler,bendpathcommand,poscommand,3,15,[-60,60])
+plotgreenarrows(ghoop,bendpathhoop,poshoop,3,15,[-58.8,40.6])
+plotgreenarrows(gcommandeuler,bendpathcommand,poscommand,3,15,[-58.8,40.6])
 
 %% Calculate mass of full structure
 % lengthmasswire(pathstruct(1).path,posstruct(1).pos,7800,0.9)
@@ -219,5 +221,5 @@ plotgreenarrows(gcommandeuler,bendpathcommand,poscommand,3,15,[-60,60])
 % SolidworksOuput(pathstruct(2).path,posstruct(2).pos,"C:\Users\harsh\Desktop\commandSWsketch.txt")
 
 %% Output command surface as IGES for Abaqus
-% AutocadOutput(bendpathcommand,poscommand,"C:\\Users\\harsh\\Desktop\\Mesh Reflector\\20220417_FinalGeometry\\CommandFEM\\Matlab_to_IGES\\trusscommandIGES");
+% AutocadOutput(bendpathcommand,poscommand,"C:\\Users\\harsh\\Desktop\\trusscommandIGES");
 % system('python "C:\Users\harsh\Desktop\Mesh Reflector\20220417_FinalGeometry\CommandFEM\Matlab_to_IGES\Matlab_to_IGES.py"');

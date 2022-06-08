@@ -23,8 +23,8 @@ heuristicpath = [4,5,1,6,2,7,8,2,1,4,12,1,3,2,9,8,9,...
 % plotgreenarrows(geuler,heuristicpath,pos,4,15,[-60 60])
 
 %% Parabolic tetrahedral truss
-FDratio = 1;
-diameter = 200; % mm
+FDratio = 0.8;
+diameter = 250; % mm
 depth = 40; % mm
 [g,pos] = parabolictetrahedraltrussgraph3D(FDratio,diameter,depth);
 
@@ -62,10 +62,10 @@ diameterwire = 0.9; % mm
 lengthmasswire(heuristicpath,pos,densitywire,diameterwire);
 
 %% Output path for Solidworks
-% SolidworksOutput(eulerpath,pos,"C:\Users\harsh\Desktop\Mesh Reflector\Simulations\tetratrusscoordsoneringSW.txt")
+% SolidworksOutput(eulerpath,pos,"C:\Users\harsh\Desktop\tetratrussSW.txt")
 
 %% Output heuristic path for AutoCAD
-% AutocadOutput(eulerpath,pos,"C:\\Users\\harsh\\Desktop\\test")
+% AutocadOutput(eulerpath,pos,"C:\\Users\\harsh\\Desktop\\tetratrussAC")
 
 %% Output path for DI Wire Pro
 % MachineInstructions(heuristicpath,pos,"C:\Users\harsh\Desktop\tetratruss.txt")

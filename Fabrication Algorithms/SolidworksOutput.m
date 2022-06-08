@@ -3,6 +3,7 @@ function SolidworksOutput(path,pos,filename)
 % Outputs coordinates of every two coordinates in Euler path as "x1 y1 z1 x2 y2 z2" in each line of a text file
 % Then a macro in Solidworks reads the file and creates a 3D sketch with line segments between each pair of two nodes
 % Unit is mm when Solidworks opens it
+% NOTE: For this to run properly, open the text file and copy paste everything into another blank text file
     fileID = fopen(filename,'w');    
     edgesadded = [0,0];
     pos = pos*1/1000;
