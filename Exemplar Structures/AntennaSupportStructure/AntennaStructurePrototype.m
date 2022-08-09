@@ -171,8 +171,8 @@ end
 matchednodes(1,:) = [];
 
 %% Plot
-nodelabelhoop = {}; % 1:numnodes(ghoop)
-nodelabelcommand = {}; % 1:numnodes(gcommandeuler)
+nodelabelhoop = 1:numnodes(ghoop); % 1:numnodes(ghoop)
+nodelabelcommand = 1:numnodes(gcommandeuler); % 1:numnodes(gcommandeuler)
 figure()
 plot(gcommandeuler,'XData',poscommand(:,1),'YData',poscommand(:,2),'ZData',poscommand(:,3),'LineWidth',1.5,'NodeLabel',nodelabelcommand,'MarkerSize',3);
 hold on
@@ -221,5 +221,6 @@ plotgreenarrows(gcommandeuler,bendpathcommand,poscommand,3,15,[-58.8,40.6])
 % SolidworksOuput(pathstruct(2).path,posstruct(2).pos,"C:\Users\harsh\Desktop\commandSWsketch.txt")
 
 %% Output command surface as IGES for Abaqus
-% AutocadOutput(bendpathcommand,poscommand,"C:\\Users\\harsh\\Desktop\\trusscommandIGES");
+AutocadOutput(bendpathhoop,poshoop,"C:\\Users\\harsh\\Desktop\\hooptrussIGES");
+AutocadOutput(bendpathcommand,poscommand,"C:\\Users\\harsh\\Desktop\\commandtrussIGES");
 % system('python "C:\Users\harsh\Desktop\Mesh Reflector\20220417_FinalGeometry\CommandFEM\Matlab_to_IGES\Matlab_to_IGES.py"');

@@ -62,10 +62,10 @@ diameterwire = 0.9; % mm
 lengthmasswire(heuristicpath,pos,densitywire,diameterwire);
 
 %% Output path for Solidworks
-% SolidworksOutput(eulerpath,pos,"C:\Users\harsh\Desktop\tetratrussSW.txt")
+SolidworksOutput(eulerpath,pos,"C:\Users\harsh\Desktop\tetratrussSW.txt")
 
 %% Output heuristic path for AutoCAD
-% AutocadOutput(eulerpath,pos,"C:\\Users\\harsh\\Desktop\\tetratrussAC")
+AutocadOutput(eulerpath,pos,"C:\\Users\\harsh\\Desktop\\tetratrussAC")
 
 %% Output path for DI Wire Pro
 % MachineInstructions(heuristicpath,pos,"C:\Users\harsh\Desktop\tetratruss.txt")

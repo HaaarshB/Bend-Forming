@@ -25,6 +25,7 @@ function AutocadOutput(path,pos,filename)
     fprintf(fileID,'%.4f\n\n',pos(node2,3));
     fprintf(fileID,'EXPORT\n');
     fprintf(fileID,append(filename,".iges\n"));
+    fprintf(fileID,'Y\n');
     fprintf(fileID,'ALL\n\n');
     fprintf(fileID,'ERASE\n');
     fprintf(fileID,'ALL\n\n');

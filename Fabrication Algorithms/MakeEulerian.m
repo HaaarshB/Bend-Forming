@@ -1,5 +1,7 @@
 function [geulerian,dupedges,edgesadded,lengthadded] = MakeEulerian(g,pos)
 %% Adding minimum number of duplicate edges to a graph to make it semi-Eulerian, i.e. only with two nodes with odd degree
+% Brute force method to find shortest paths between all but two nodes with odd degree
+% Runs in O(N!) where N is the number of odd nodes in the graph
 % Follows this website: https://freakonometrics.hypotheses.org/53694
 
 geulerian = g;
@@ -11,7 +13,7 @@ lengthadded = 0;
 
 % Compare pairings of odd vertices to find ones with the least distance
 allpairs = nchoosek(oddvertices,2);
-for i = 1:size(allpairs,1)
+for i = 1:size(allpairs,1) % Loop through each possible pair of odd vertices
     pair = allpairs(i,:);
     pairpath = shortestpath(g,pair(1),pair(2)); % shortest path btw each odd vertex pairing
     allpaths(i,1:length(pairpath)) = pairpath;
