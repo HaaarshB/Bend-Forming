@@ -9,17 +9,16 @@ function MachineInstructionsFabrication(path,pos,filename,commentbool,pinzbool,b
 % features to help with fabrication, such as:
 %   Avoid rotations < 10 deg or > 170 deg (see lines 98-116); 
 %   Move bend head up and down with PINZ command to avoid collision while rotating (see lines 117-147);
-%   Replace 180 deg bends with two 90 deg bends and small feed (see lines 142-144);
-%   Adjust feed for wire diameter and bend head radius (see lines 166-189);
+%   Adjust feed for wire diameter and bend head radius (see lines 163-186);
 
 if nargin < 4
     commentbool = 0; % Boolean for adding node number comments before each FEED line
     pinzbool = 0; % Boolean for adding PINZ movements before ROTATE wire lines >90 deg
-    bendheaddiam = 1; % [mm]
-    wirediam = 1; % [mm]
+    bendheaddiam = 2; % [mm]
+    wirediam = 0.9; % [mm]
 elseif nargin > 4 && nargin < 6
-    bendheaddiam = 1; % [mm]
-    wirediam = 1; % [mm]
+    bendheaddiam = 2; % [mm]
+    wirediam = 0.9; % [mm]
 end
 
 fileID = fopen(filename,'w');
@@ -139,9 +138,7 @@ for i=1:(length(path)-1)
             if pinzbool
                 pindown = 0;
             end
-            fprintf(fileID,'BEND %.5f\n',90*bendanglesign); % replace 180 deg bend (doubled wire) with two 90 deg bends and small feed of 1 mm
-            fprintf(fileID,'FEED %.5f\n',1);
-            fprintf(fileID,'BEND %.5f\n',90*bendanglesign);
+            fprintf(fileID,'BEND %.5f\n',180*bendanglesign); % for doubled wire use 180 deg bend (can change depending on machine)
             prevdoubledwire = 1;
         else
             if pinzbool

@@ -1,0 +1,928 @@
+(Node 66 to 67)
+FEED 15.64577
+BEND 78.38073
+PINZ -5
+Rotate wire 124.07149 degrees
+(Node 67 to 64)
+FEED 14.23810
+BEND -114.31663
+PINZ -5
+Rotate wire 111.22055 degrees
+(Node 64 to 63)
+FEED 72.66478
+BEND 56.00241
+Rotate wire 31.08106 degrees
+(Node 63 to 39)
+FEED 26.85741
+BEND 102.79665
+Rotate wire 13.33010 degrees
+(Node 39 to 38)
+FEED 25.33294
+BEND 51.76879
+Rotate wire 67.30699 degrees
+(Node 38 to 59)
+FEED 29.95827
+BEND -70.86725
+Rotate wire 42.56970 degrees
+(Node 59 to 65)
+FEED 40.84739
+BEND 71.56779
+Rotate wire 74.82254 degrees
+(Node 65 to 64)
+FEED 21.44772
+BEND -109.10905
+(Node 64 to 67)
+FEED 14.26405
+BEND -110.62670
+Rotate wire 22.59251 degrees
+(Node 67 to 65)
+FEED 21.50992
+BEND 134.40319
+Rotate wire 44.83995 degrees
+(Node 65 to 66)
+FEED 12.26029
+BEND -78.61514
+PINZ -5
+Rotate wire 143.67218 degrees
+(Node 66 to 62)
+FEED 31.57316
+PINZ 0
+BEND -18.53961
+Rotate wire 62.93089 degrees
+(Node 62 to 39)
+FEED 41.61326
+BEND 141.33781
+Rotate wire 58.56262 degrees
+(Node 39 to 38)
+FEED 25.69434
+BEND -21.59235
+PINZ -5
+Rotate wire 135.43341 degrees
+(Node 38 to 31)
+FEED 64.93768
+PINZ 0
+BEND -156.09122
+PINZ -5
+Rotate wire 112.65178 degrees
+(Node 31 to 34)
+FEED 58.95367
+PINZ 0
+BEND -48.12754
+Rotate wire 10.24188 degrees
+(Node 34 to 60)
+FEED 19.93462
+BEND 74.82177
+Rotate wire 66.32823 degrees
+(Node 60 to 61)
+FEED 18.81996
+BEND -137.92782
+(Node 61 to 64)
+FEED 82.58772
+BEND -168.92464
+Rotate wire 63.62692 degrees
+(Node 64 to 60)
+FEED 68.93513
+BEND 161.77688
+Rotate wire 72.39766 degrees
+(Node 60 to 65)
+FEED 60.20433
+BEND -138.47983
+(Node 65 to 62)
+FEED 35.45741
+BEND -96.02577
+PINZ -5
+Rotate wire 132.41544 degrees
+(Node 62 to 59)
+FEED 24.28972
+PINZ 0
+BEND -65.32168
+PINZ -5
+Rotate wire 102.78891 degrees
+(Node 59 to 34)
+FEED 24.09262
+PINZ 0
+BEND -65.06190
+PINZ -5
+Rotate wire 100.57002 degrees
+(Node 34 to 43)
+FEED 29.82285
+BEND 88.17084
+(Node 43 to 44)
+FEED 33.97810
+BEND 63.18413
+PINZ -5
+Rotate wire 137.20515 degrees
+(Node 44 to 39)
+FEED 21.85611
+BEND -57.28083
+Rotate wire 40.73893 degrees
+(Node 39 to 67)
+FEED 84.17101
+BEND -163.38966
+PINZ -5
+Rotate wire 138.87273 degrees
+(Node 67 to 63)
+FEED 68.03829
+BEND 32.65163
+Rotate wire 68.28278 degrees
+(Node 63 to 44)
+FEED 34.14983
+BEND -61.56565
+PINZ -5
+Rotate wire 102.98803 degrees
+(Node 44 to 41)
+FEED 40.32761
+BEND 27.47515
+PINZ -5
+Rotate wire 112.07485 degrees
+(Node 41 to 35)
+FEED 47.80395
+PINZ 0
+BEND 105.50108
+Rotate wire 85.60544 degrees
+(Node 35 to 42)
+FEED 35.80808
+BEND -42.44753
+Rotate wire 82.61919 degrees
+(Node 42 to 25)
+FEED 133.37184
+BEND 120.79885
+PINZ -5
+Rotate wire 115.12882 degrees
+(Node 25 to 45)
+FEED 100.42039
+BEND -37.01771
+Rotate wire 80.63670 degrees
+(Node 45 to 40)
+FEED 45.36227
+BEND -135.52789
+PINZ -5
+Rotate wire 153.40180 degrees
+(Node 40 to 37)
+FEED 52.87974
+BEND 54.37677
+Rotate wire 36.83275 degrees
+(Node 37 to 30)
+FEED 62.01197
+BEND 32.06680
+PINZ -5
+Rotate wire 109.62397 degrees
+(Node 30 to 25)
+FEED 52.87231
+PINZ 0
+BEND 94.75250
+(Node 25 to 16)
+FEED 38.57410
+BEND 97.11078
+Rotate wire 29.21855 degrees
+(Node 16 to 26)
+FEED 62.67625
+BEND -149.34633
+(Node 26 to 8)
+FEED 58.29424
+BEND -97.43414
+Rotate wire 25.72383 degrees
+(Node 8 to 16)
+FEED 31.83099
+BEND 100.42951
+Rotate wire 22.58119 degrees
+(Node 16 to 2)
+FEED 38.93748
+BEND -58.54318
+Rotate wire 59.88232 degrees
+(Node 2 to 5)
+FEED 29.65764
+BEND 35.59454
+Rotate wire 34.97245 degrees
+(Node 5 to 4)
+FEED 41.77865
+BEND -141.44850
+(Node 4 to 23)
+FEED 32.22189
+BEND 90.00000
+FEED 1.00000
+BEND 90.00000
+PINZ -5
+Rotate wire 159.84458 degrees
+(Node 23 to 4)
+FEED 32.53768
+BEND -58.59141
+(Node 4 to 6)
+FEED 55.67514
+PINZ 0
+BEND -47.60632
+PINZ -5
+Rotate wire 168.90373 degrees
+(Node 6 to 12)
+FEED 16.41723
+BEND 106.31809
+(Node 12 to 1)
+FEED 9.91719
+BEND 110.08007
+(Node 1 to 6)
+FEED 16.58392
+BEND 143.60183
+Rotate wire 66.73139 degrees
+(Node 6 to 12)
+FEED 16.41525
+BEND 106.57894
+Rotate wire 55.81345 degrees
+(Node 12 to 51)
+FEED 56.56103
+BEND -58.53488
+Rotate wire 53.92766 degrees
+(Node 51 to 50)
+FEED 16.82255
+BEND 124.49406
+(Node 50 to 52)
+FEED 17.63763
+BEND 120.07097
+Rotate wire 56.39403 degrees
+(Node 52 to 51)
+FEED 16.50049
+BEND -61.63642
+Rotate wire 84.71908 degrees
+(Node 51 to 6)
+FEED 54.22239
+BEND -55.98806
+PINZ -5
+Rotate wire 115.87239 degrees
+(Node 6 to 7)
+FEED 29.22286
+PINZ 0
+BEND -140.48854
+(Node 7 to 3)
+FEED 58.30290
+BEND -153.42486
+Rotate wire 41.76231 degrees
+(Node 3 to 6)
+FEED 40.70453
+BEND 72.26699
+PINZ -5
+Rotate wire 97.63762 degrees
+(Node 6 to 52)
+FEED 64.89353
+PINZ 0
+BEND 110.32310
+(Node 52 to 54)
+FEED 38.04792
+BEND -119.26955
+(Node 54 to 53)
+FEED 14.46010
+BEND -83.69702
+PINZ -5
+Rotate wire 167.41968 degrees
+(Node 53 to 52)
+FEED 33.42584
+BEND 94.44732
+(Node 52 to 1)
+FEED 63.32426
+BEND 110.50571
+Rotate wire 12.25320 degrees
+(Node 1 to 5)
+FEED 58.88626
+BEND -35.42570
+Rotate wire 72.95933 degrees
+(Node 5 to 14)
+FEED 18.22739
+BEND -126.83065
+Rotate wire 24.00341 degrees
+(Node 14 to 2)
+FEED 36.83584
+BEND 48.39369
+Rotate wire 55.21633 degrees
+(Node 2 to 8)
+FEED 45.72468
+BEND -88.54141
+(Node 8 to 9)
+FEED 70.03369
+BEND -86.73050
+PINZ -5
+Rotate wire 156.45946 degrees
+(Node 9 to 3)
+FEED 38.52193
+BEND 41.62872
+Rotate wire 53.02564 degrees
+(Node 3 to 1)
+FEED 30.92963
+BEND 14.12451
+Rotate wire 27.40210 degrees
+(Node 1 to 4)
+FEED 59.85670
+BEND 43.62992
+(Node 4 to 17)
+FEED 62.61555
+BEND 46.08290
+Rotate wire 27.88211 degrees
+(Node 17 to 33)
+FEED 66.58033
+BEND 41.40372
+PINZ -5
+Rotate wire 166.61456 degrees
+(Node 33 to 18)
+FEED 49.03454
+BEND -51.63573
+PINZ -5
+Rotate wire 156.30574 degrees
+(Node 18 to 20)
+FEED 74.95416
+BEND 97.38341
+Rotate wire 63.59435 degrees
+(Node 20 to 11)
+FEED 90.74151
+BEND 155.25591
+Rotate wire 70.48657 degrees
+(Node 11 to 47)
+FEED 29.40695
+BEND -120.84483
+(Node 47 to 10)
+FEED 85.08327
+BEND -159.59640
+PINZ -5
+Rotate wire 155.55245 degrees
+(Node 10 to 11)
+FEED 74.66828
+BEND 72.41710
+PINZ -5
+Rotate wire 164.26364 degrees
+(Node 11 to 20)
+FEED 90.86066
+BEND -126.91598
+PINZ -5
+Rotate wire 134.81725 degrees
+(Node 20 to 19)
+FEED 98.63189
+BEND 53.03408
+Rotate wire 51.66905 degrees
+(Node 19 to 17)
+FEED 65.12975
+BEND 54.29471
+Rotate wire 35.37188 degrees
+(Node 17 to 24)
+FEED 54.27429
+BEND 128.61598
+Rotate wire 30.47354 degrees
+(Node 24 to 36)
+FEED 66.54565
+BEND -50.51891
+(Node 36 to 42)
+FEED 50.22739
+BEND 90.00000
+FEED 1.00000
+BEND 90.00000
+(Node 42 to 36)
+FEED 50.32534
+BEND 79.51674
+(Node 36 to 25)
+FEED 114.70981
+BEND 67.82543
+Rotate wire 10.55094 degrees
+(Node 25 to 30)
+FEED 52.17130
+BEND 57.82223
+(Node 30 to 45)
+FEED 61.32830
+BEND 79.40140
+PINZ -5
+Rotate wire 146.04878 degrees
+(Node 45 to 42)
+FEED 119.38804
+BEND -47.88681
+PINZ -5
+Rotate wire 122.21155 degrees
+(Node 42 to 33)
+FEED 53.68202
+BEND 116.02949
+Rotate wire 19.76068 degrees
+(Node 33 to 36)
+FEED 36.95043
+BEND -88.33349
+PINZ -5
+Rotate wire 145.24666 degrees
+(Node 36 to 17)
+FEED 53.51837
+BEND 58.63027
+PINZ -5
+Rotate wire 119.10406 degrees
+(Node 17 to 10)
+FEED 26.41564
+PINZ 0
+BEND 91.27593
+Rotate wire 29.51216 degrees
+(Node 10 to 4)
+FEED 56.90543
+BEND -96.51630
+(Node 4 to 7)
+FEED 66.40365
+BEND -136.71569
+Rotate wire 33.53535 degrees
+(Node 7 to 10)
+FEED 83.12075
+BEND 77.69137
+Rotate wire 52.38976 degrees
+(Node 10 to 19)
+FEED 58.63308
+BEND -77.84660
+Rotate wire 35.25960 degrees
+(Node 19 to 33)
+FEED 30.55275
+BEND 67.10151
+PINZ -5
+Rotate wire 142.72030 degrees
+(Node 33 to 35)
+FEED 51.38787
+BEND -38.07344
+PINZ -5
+Rotate wire 120.02963 degrees
+(Node 35 to 27)
+FEED 54.80605
+PINZ 0
+BEND -120.80301
+Rotate wire 41.32460 degrees
+(Node 27 to 41)
+FEED 35.71317
+BEND 55.06870
+Rotate wire 51.59457 degrees
+(Node 41 to 46)
+FEED 52.38504
+BEND -138.21173
+(Node 46 to 42)
+FEED 76.06661
+BEND -136.19968
+PINZ -5
+Rotate wire 101.44415 degrees
+(Node 42 to 41)
+FEED 51.30311
+BEND 34.99373
+Rotate wire 78.26208 degrees
+(Node 41 to 39)
+FEED 41.53187
+BEND 124.28513
+Rotate wire 39.05291 degrees
+(Node 39 to 27)
+FEED 31.42639
+BEND -111.60196
+(Node 27 to 32)
+FEED 77.15544
+BEND -138.78659
+Rotate wire 19.36131 degrees
+(Node 32 to 38)
+FEED 53.84434
+BEND 77.63846
+Rotate wire 70.31990 degrees
+(Node 38 to 34)
+FEED 26.07782
+BEND -19.33197
+Rotate wire 37.59425 degrees
+(Node 34 to 29)
+FEED 38.53158
+BEND -70.53923
+PINZ -5
+Rotate wire 166.55316 degrees
+(Node 29 to 40)
+FEED 30.82506
+BEND 64.02616
+PINZ -5
+Rotate wire 132.36489 degrees
+(Node 40 to 46)
+FEED 55.18557
+PINZ 0
+BEND 134.08975
+PINZ -5
+Rotate wire 154.66868 degrees
+(Node 46 to 45)
+FEED 62.50635
+BEND -48.30318
+PINZ -5
+Rotate wire 94.58305 degrees
+(Node 45 to 37)
+FEED 38.46008
+PINZ 0
+BEND -37.80010
+PINZ -5
+Rotate wire 95.99733 degrees
+(Node 37 to 22)
+FEED 39.53204
+BEND 74.95820
+Rotate wire 30.07021 degrees
+(Node 22 to 21)
+FEED 78.40746
+BEND -114.31187
+(Node 21 to 15)
+FEED 43.56029
+BEND 90.00000
+FEED 1.00000
+BEND 90.00000
+(Node 15 to 21)
+FEED 43.66257
+BEND 79.07273
+(Node 21 to 28)
+FEED 71.70583
+BEND 99.91446
+(Node 28 to 22)
+FEED 46.08475
+BEND -90.00000
+FEED 1.00000
+BEND -90.00000
+PINZ -5
+Rotate wire 131.98097 degrees
+(Node 22 to 28)
+FEED 46.77127
+BEND 27.02271
+PINZ -5
+Rotate wire 139.03675 degrees
+(Node 28 to 29)
+FEED 39.42376
+BEND -74.10472
+(Node 29 to 31)
+FEED 72.72486
+BEND -94.81915
+Rotate wire 64.63325 degrees
+(Node 31 to 15)
+FEED 88.28418
+BEND 53.83713
+Rotate wire 66.14199 degrees
+(Node 15 to 9)
+FEED 49.22520
+BEND -111.93027
+Rotate wire 10.33300 degrees
+(Node 9 to 13)
+FEED 72.79407
+BEND 112.18678
+PINZ -5
+Rotate wire 168.85995 degrees
+(Node 13 to 8)
+FEED 45.73425
+BEND -79.53068
+PINZ -5
+Rotate wire 152.96437 degrees
+(Node 8 to 3)
+FEED 82.97798
+PINZ 0
+BEND -146.04821
+Rotate wire 15.58921 degrees
+(Node 3 to 2)
+FEED 73.46720
+BEND 156.63236
+PINZ -5
+Rotate wire 112.06970 degrees
+(Node 2 to 1)
+FEED 59.50007
+PINZ 0
+BEND 105.45954
+Rotate wire 28.99137 degrees
+(Node 1 to 50)
+FEED 61.29997
+BEND -171.68233
+Rotate wire 70.88227 degrees
+(Node 50 to 12)
+FEED 67.68076
+BEND 67.34739
+PINZ -5
+Rotate wire 143.92199 degrees
+(Node 12 to 3)
+FEED 24.31318
+PINZ 0
+BEND 147.52648
+PINZ -5
+Rotate wire 130.02260 degrees
+(Node 3 to 7)
+FEED 59.71408
+PINZ 0
+BEND 165.87074
+PINZ -5
+Rotate wire 160.62769 degrees
+(Node 7 to 9)
+FEED 94.12107
+PINZ 0
+BEND 130.29719
+(Node 9 to 49)
+FEED 68.20582
+BEND 66.86374
+(Node 49 to 11)
+FEED 74.84209
+BEND -168.76786
+PINZ -5
+Rotate wire 159.35310 degrees
+(Node 11 to 48)
+FEED 75.17740
+PINZ 0
+BEND -62.69268
+Rotate wire 16.05463 degrees
+(Node 48 to 32)
+FEED 73.02826
+BEND 105.38951
+PINZ -5
+Rotate wire 162.76251 degrees
+(Node 32 to 31)
+FEED 38.99835
+BEND -29.07170
+PINZ -5
+Rotate wire 107.99867 degrees
+(Node 31 to 21)
+FEED 50.60166
+PINZ 0
+BEND -113.82264
+PINZ -5
+Rotate wire 146.13256 degrees
+(Node 21 to 29)
+FEED 77.30691
+BEND 48.79405
+PINZ -5
+Rotate wire 102.55439 degrees
+(Node 29 to 43)
+FEED 38.55282
+BEND -106.00979
+Rotate wire 69.09708 degrees
+(Node 43 to 60)
+FEED 28.74405
+BEND 44.78230
+Rotate wire 50.41615 degrees
+(Node 60 to 59)
+FEED 20.28017
+BEND 43.53338
+PINZ -5
+Rotate wire 123.97807 degrees
+(Node 59 to 62)
+FEED 23.11624
+BEND -108.05409
+Rotate wire 20.14508 degrees
+(Node 62 to 38)
+FEED 27.01877
+BEND 75.39380
+Rotate wire 88.77419 degrees
+(Node 38 to 27)
+FEED 50.80972
+BEND 98.52955
+PINZ -5
+Rotate wire 120.92380 degrees
+(Node 27 to 20)
+FEED 79.28568
+PINZ 0
+BEND 59.48148
+Rotate wire 19.43027 degrees
+(Node 20 to 47)
+FEED 64.55237
+BEND 89.61987
+(Node 47 to 19)
+FEED 73.07910
+BEND 90.33432
+Rotate wire 44.11297 degrees
+(Node 19 to 18)
+FEED 49.31823
+BEND -71.15628
+(Node 18 to 35)
+FEED 34.58325
+BEND 90.00000
+FEED 1.00000
+BEND 90.00000
+Rotate wire 33.97257 degrees
+(Node 35 to 18)
+FEED 34.34888
+BEND -120.62481
+PINZ -5
+Rotate wire 99.46353 degrees
+(Node 18 to 27)
+FEED 63.20236
+BEND 30.13524
+(Node 27 to 39)
+FEED 31.99583
+BEND -51.49101
+(Node 39 to 63)
+FEED 26.97973
+BEND 88.39717
+(Node 63 to 61)
+FEED 34.59801
+BEND 54.39439
+(Node 61 to 43)
+FEED 19.24222
+BEND -90.00000
+FEED 1.00000
+BEND -90.00000
+PINZ -5
+Rotate wire 154.06196 degrees
+(Node 43 to 61)
+FEED 19.09198
+BEND 108.33190
+Rotate wire 34.20027 degrees
+(Node 61 to 44)
+FEED 34.36415
+BEND 80.19723
+PINZ -5
+Rotate wire 160.88951 degrees
+(Node 44 to 46)
+FEED 41.02117
+BEND -133.73112
+(Node 46 to 43)
+FEED 44.60726
+BEND 99.20205
+PINZ -5
+Rotate wire 132.97591 degrees
+(Node 43 to 40)
+FEED 39.08015
+PINZ 0
+BEND 54.49618
+Rotate wire 33.93184 degrees
+(Node 40 to 28)
+FEED 43.93564
+BEND -96.37027
+Rotate wire 39.12849 degrees
+(Node 28 to 37)
+FEED 33.77310
+BEND 52.09956
+(Node 37 to 26)
+FEED 60.71771
+BEND 79.09101
+Rotate wire 13.02836 degrees
+(Node 26 to 13)
+FEED 33.88994
+BEND 105.09975
+Rotate wire 26.18656 degrees
+(Node 13 to 22)
+FEED 44.18560
+BEND -109.54783
+PINZ -5
+Rotate wire 93.35775 degrees
+(Node 22 to 15)
+FEED 72.80152
+BEND 59.22648
+PINZ -5
+Rotate wire 145.12821 degrees
+(Node 15 to 49)
+FEED 71.22383
+PINZ 0
+BEND 112.97909
+PINZ -5
+Rotate wire 148.40467 degrees
+(Node 49 to 56)
+FEED 23.20405
+PINZ 0
+BEND 124.69486
+PINZ -5
+Rotate wire 104.22620 degrees
+(Node 56 to 58)
+FEED 29.77578
+PINZ 0
+BEND 132.95507
+Rotate wire 16.82879 degrees
+(Node 58 to 55)
+FEED 34.46499
+BEND -143.95135
+(Node 55 to 57)
+FEED 21.25129
+BEND -71.94147
+(Node 57 to 58)
+FEED 21.16066
+BEND 90.00000
+FEED 1.00000
+BEND 90.00000
+PINZ -5
+Rotate wire 114.75570 degrees
+(Node 58 to 57)
+FEED 21.02405
+BEND -106.51264
+(Node 57 to 48)
+FEED 23.68102
+PINZ 0
+BEND -129.24367
+(Node 48 to 58)
+FEED 26.07301
+BEND 147.59852
+Rotate wire 83.18191 degrees
+(Node 58 to 49)
+FEED 24.01418
+BEND 119.70802
+PINZ -5
+Rotate wire 93.24640 degrees
+(Node 49 to 11)
+FEED 76.28513
+PINZ 0
+BEND 110.78289
+(Node 11 to 7)
+FEED 37.48076
+BEND 99.17271
+(Node 7 to 49)
+FEED 71.41444
+BEND 69.91484
+Rotate wire 54.78679 degrees
+(Node 49 to 48)
+FEED 14.13137
+BEND -60.64037
+Rotate wire 11.91806 degrees
+(Node 48 to 55)
+FEED 25.97612
+BEND -121.20119
+(Node 55 to 56)
+FEED 25.52754
+BEND -118.52302
+(Node 56 to 48)
+FEED 25.99068
+BEND -42.64403
+Rotate wire 57.70964 degrees
+(Node 48 to 20)
+FEED 71.31431
+BEND -108.78590
+(Node 20 to 32)
+FEED 51.02998
+BEND -37.76030
+(Node 32 to 31)
+FEED 38.20898
+BEND -105.38184
+PINZ -5
+Rotate wire 169.46200 degrees
+(Node 31 to 48)
+FEED 74.17889
+PINZ 0
+BEND -109.80137
+Rotate wire 71.70113 degrees
+(Node 48 to 15)
+FEED 79.49482
+BEND 63.65764
+Rotate wire 77.09470 degrees
+(Node 15 to 13)
+FEED 71.16419
+BEND -106.68955
+Rotate wire 26.18656 degrees
+(Node 13 to 22)
+FEED 44.02111
+BEND 136.97030
+Rotate wire 46.58415 degrees
+(Node 22 to 26)
+FEED 48.79667
+BEND -65.25498
+Rotate wire 46.05052 degrees
+(Node 26 to 30)
+FEED 28.41885
+BEND 102.14645
+Rotate wire 29.67637 degrees
+(Node 30 to 16)
+FEED 62.70904
+BEND -57.94195
+Rotate wire 21.24586 degrees
+(Node 16 to 14)
+FEED 53.38457
+BEND -137.76159
+Rotate wire 11.69559 degrees
+(Node 14 to 25)
+FEED 54.01788
+BEND 129.08188
+PINZ -5
+Rotate wire 101.74004 degrees
+(Node 25 to 24)
+FEED 65.11682
+BEND -27.53116
+PINZ -5
+Rotate wire 108.11039 degrees
+(Node 24 to 17)
+FEED 54.21225
+BEND 141.44174
+PINZ -5
+Rotate wire 148.18131 degrees
+(Node 17 to 23)
+FEED 71.59580
+BEND -38.25993
+PINZ -5
+Rotate wire 148.65976 degrees
+(Node 23 to 14)
+FEED 23.67653
+PINZ 0
+BEND -114.09222
+Rotate wire 22.67040 degrees
+(Node 14 to 54)
+FEED 49.54090
+BEND 31.43817
+PINZ -5
+Rotate wire 123.70196 degrees
+(Node 54 to 50)
+FEED 41.41471
+PINZ 0
+BEND 158.21812
+(Node 50 to 53)
+FEED 36.54053
+BEND 45.68914
+PINZ -5
+Rotate wire 132.91593 degrees
+(Node 53 to 23)
+FEED 55.29138
+BEND -125.88301
+PINZ -5
+Rotate wire 168.00807 degrees
+(Node 23 to 5)
+FEED 25.94915
+BEND 81.40870
+(Node 5 to 54)
+FEED 31.77098
+BEND 144.41797
+Rotate wire 77.34012 degrees
+(Node 54 to 23)
+FEED 45.61017
+BEND 7.32525
+Rotate wire 80.28420 degrees
+(Node 23 to 24)
+FEED 43.51805
+BEND -153.44394
+(Node 24 to 14)
+FEED 52.06345
+BEND -54.13045
+(Node 14 to 53)
+FEED 61.01139
