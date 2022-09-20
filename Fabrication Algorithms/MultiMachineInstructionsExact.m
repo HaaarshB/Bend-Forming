@@ -21,6 +21,7 @@ for pathnum=1:size(pathstruct,2)
 for i=1:length(path)
     % FIRST NODE OF FULL PATH
     if pathnum==1 && i==1
+        fprintf(fileID,'**STARTING BEND PATH %.0f**\n',pathnum);
         firstnode = path(i);
         secondnode = path(i+1);
         thirdnode = path(i+2);
@@ -57,7 +58,7 @@ for i=1:length(path)
     % LAST NODE OF INTERMEDIATE PATHS
     elseif  i==length(path)
         if pathnum~=size(pathstruct,2)
-            % fprintf(fileID,'\n**STARTING BEND PATH %.0f**\n',pathnum+1);
+            fprintf(fileID,'\n**STARTING BEND PATH %.0f**\n',pathnum+1);
         end
     % ALL NODES IN BETWEEN
     else
@@ -89,6 +90,7 @@ for i=1:length(path)
             end
         % Figure out if I need to pause and rotate wire, i.e. change plane 
         else
+            rotateanglesign = -bendanglesign; % rotate angle sign always opposite of previous bend angle sign (based on my CYS)
             % Compute plane of next three nodes
             nnext = cross(thirdcoord-secondcoord,firstcoord-secondcoord)/norm(cross(thirdcoord-secondcoord,firstcoord-secondcoord))*bendanglesign;
             if norm(cross(nnext,ncurrent))==0 % if plane of next three coordinates is same as machine plane
@@ -120,7 +122,7 @@ for i=1:length(path)
                 end
                 if round(rotate)~=0
                     % Put "ROTATE __" into text file
-                    fprintf(fileID,'Rotate wire %.5f degrees\n',rotate);
+                    fprintf(fileID,'Rotate wire %.5f degrees\n',rotate*rotateanglesign);
                 end
             end
         end

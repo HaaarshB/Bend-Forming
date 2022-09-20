@@ -10,7 +10,8 @@ postop = zeros(numnodes, 3);
 
 %% Coordinates (top layer)
 % Inner triangle coordinates
-h = sidelength*sqrt(3)/2; % height above xy-plane
+% h = sidelength*sqrt(3)/2; % height above xy-plane
+h = sidelength*sqrt(2/3); % height above xy-plane % HIEGHT SUCH THAT ALL MEMBERS HAVE THE SAME LENGTH
 rin = sidelength/sqrt(3);
 thetain = [pi/2, pi/2+2*pi/3, pi/2+4*pi/3];
 postop(1:3,:) = [rin*cos(thetain'),rin*sin(thetain'),h*ones(size(thetain,2),1)];

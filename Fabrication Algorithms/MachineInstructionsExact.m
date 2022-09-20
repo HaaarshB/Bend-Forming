@@ -14,9 +14,26 @@ if nargin < 4
 end
 
 fileID = fopen(filename,'w');
-for i=1:(length(path)-1)
+% COLLINEAR NODES IN BEGINNING OF PATH
+lastcollinearnode = 1;
+while lastcollinearnode < (length(path)-1)
+    firstnode = path(lastcollinearnode);
+    secondnode = path(lastcollinearnode+1);
+    thirdnode = path(lastcollinearnode+2);
+    firstcoord = pos(firstnode,:); % current node
+    secondcoord = pos(secondnode,:);
+    thirdcoord = pos(thirdnode,:);
+    if round(180-rad2deg(anglebtw(thirdcoord-secondcoord,firstcoord-secondcoord))) == 0 % check if there is a zero bend/rotate
+        feed = norm(secondcoord-firstcoord);
+        fprintf(fileID,'FEED %.5f\n',feed);
+        lastcollinearnode = lastcollinearnode + 1;
+    else
+        break
+    end
+end
+for i=lastcollinearnode:(length(path)-1)
     % FIRST NODE OF PATH
-    if i==1
+    if i==lastcollinearnode
         firstnode = path(i);
         secondnode = path(i+1);
         thirdnode = path(i+2);
@@ -58,10 +75,10 @@ for i=1:(length(path)-1)
         firstcoord = pos(firstnode,:); % current node
         secondcoord = pos(secondnode,:);
         thirdcoord = pos(thirdnode,:);
-        zerobendrotate = 0; % boolean for a zero bend/rotate (i.e. all three nodes are collinear)
+        collinearnodes = 0; % boolean for a zero bend/rotate (i.e. all three nodes are collinear)
         doubledwire = 0; % boolean for a doubled wire (i.e. first node is same as third node)
         if round(180-rad2deg(anglebtw(thirdcoord-secondcoord,firstcoord-secondcoord))) == 0 % check if there is a zero bend/rotate
-            zerobendrotate = 1;
+            collinearnodes = 1;
         elseif firstcoord == thirdcoord % check if there is a doubled wire (i.e. first node is same as third node)
             doubledwire = 1;             
             if bendanglesign == 1
@@ -71,6 +88,7 @@ for i=1:(length(path)-1)
             end
         % Figure out if I need to pause and rotate wire, i.e. change plane 
         else
+            rotateanglesign = -bendanglesign; % rotate angle sign always opposite of previous bend angle sign (based on my CYS)
             % Compute plane of next three nodes
             nnext = cross(thirdcoord-secondcoord,firstcoord-secondcoord)/norm(cross(thirdcoord-secondcoord,firstcoord-secondcoord))*bendanglesign;
             if norm(cross(nnext,ncurrent))==0 % if plane of next three coordinates is same as machine plane
@@ -102,7 +120,7 @@ for i=1:(length(path)-1)
                 end
                 if round(rotate)~=0
                     % Put "ROTATE __" into text file
-                    fprintf(fileID,'Rotate wire %.5f degrees\n',rotate);
+                    fprintf(fileID,'Rotate wire %.5f degrees\n',rotate*rotateanglesign);
                 end
             end
         end
@@ -116,11 +134,9 @@ for i=1:(length(path)-1)
         % Put "BEND __" into text file
         if doubledwire
             fprintf(fileID,'BEND %.5f\n',180*bendanglesign);
-        else
-            if zerobendrotate ~= 1
-                bend = 180-rad2deg(anglebtw(thirdcoord-secondcoord,firstcoord-secondcoord));
-                fprintf(fileID,'BEND %.5f\n',bend*bendanglesign);
-            end
+        elseif collinearnodes ~= 1
+            bend = 180-rad2deg(anglebtw(thirdcoord-secondcoord,firstcoord-secondcoord));
+            fprintf(fileID,'BEND %.5f\n',bend*bendanglesign);
         end
     end
 end

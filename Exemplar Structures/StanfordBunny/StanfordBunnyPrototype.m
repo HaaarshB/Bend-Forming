@@ -6,12 +6,12 @@ addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Mesh Tools\jsonlab-master"
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\StanfordBunny\BunnyMeshes")
 
 %% Load low-poly bunny from OBJ file
-objfile = "C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\StanfordBunny\BunnyPolygonScaledHalf.obj";
+objfile = "C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\StanfordBunny\BunnyMeshes\BunnyPolygonScaledHalf.obj";
 [facesbunny,posbunnyog] = readObj(objfile);
 [gbunny,posbunny] = facestograph(facesbunny,posbunnyog);
 % plotgraph(gbunny,posbunny)
-plotgreenarrows(geulerbunny,pathbunny,posbunny,4,15,[105 10])
-plotblacksvg(pathbunny,posbunny,4,[105 10])
+% plotbendpatharrows(geulerbunny,pathbunny,posbunny,4,15,[94.4 33.5])
+% plotblacksvg(pathbunny,posbunny,4,[105 10])
 
 [geulerbunny,dupedgesbunny,edgesaddedbunny,lengthaddedbunny,pathbunny] = CPP_Algorithm(gbunny,posbunny);
 % plotbendpath(geulerbunny,pathbunny,posbunny,0.2)

@@ -14,7 +14,7 @@ plotgraph(gteapot,posteapot,1,0,[45 45])
 % plotbendpath(geulerteapot,pathteapot,posteapot,0.1)
 % plotbendpath(geulertower,pathteapot,posteapot,0.01,1,20,"C:\Users\harsh\Desktop\Teapot\Teapot_TestPathFast.avi",[90 0])
 % MachineInstructionsExact(pathteapot,posteapot,bendpathfile,0)
-MachineInstructionsFabrication(pathteapot,posteapot,bendpathfile,1,1,2,0.9)
+% MachineInstructionsFabrication(pathteapot,posteapot,bendpathfile,1,1,2,0.9)
 
 %% Plot bend path
 plotbendpath(geulerteapot,pathteapot,posteapot,0.1)

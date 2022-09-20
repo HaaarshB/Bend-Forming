@@ -1,5 +1,6 @@
 function MachineInstructionsFabrication(path,pos,filename,commentbool,pinzbool,bendheaddiam,wirediam)
 %% Function for converting an Euler path through a desired truss into FABRICATION machine instructions for a CNC wire bender with 3 DOFs (feed, bend, and rotate)
+% NOTE: bendheaddiam and wirediam are in [MM]
 % Uses geometry of the bend path to create FEED/BEND/ROTATE instructions
 % Uses distance between every two nodes in path (FEED),
 % angles in between every three nodes in heuristic path (BEND),
@@ -22,9 +23,30 @@ elseif nargin > 4 && nargin < 6
 end
 
 fileID = fopen(filename,'w');
-for i=1:(length(path)-1)
+% COLLINEAR NODES IN BEGINNING OF PATH
+lastcollinearnode = 1;
+while lastcollinearnode < (length(path)-1)
+    firstnode = path(lastcollinearnode);
+    secondnode = path(lastcollinearnode+1);
+    thirdnode = path(lastcollinearnode+2);
+    firstcoord = pos(firstnode,:); % current node
+    secondcoord = pos(secondnode,:);
+    thirdcoord = pos(thirdnode,:);
+    if round(180-rad2deg(anglebtw(thirdcoord-secondcoord,firstcoord-secondcoord))) == 0 % check if there is a zero bend/rotate
+        if commentbool
+            % Put node numers into text file as a comment
+            fprintf(fileID,'(Node %.0f to %.0f)\n',firstnode,secondnode);
+        end
+        feed = norm(secondcoord-firstcoord);
+        fprintf(fileID,'FEED %.5f\n',feed);
+        lastcollinearnode = lastcollinearnode + 1;
+    else
+        break
+    end
+end
+for i=lastcollinearnode:(length(path)-1)
     % FIRST NODE OF PATH
-    if i==1
+    if i==lastcollinearnode
         firstnode = path(i);
         secondnode = path(i+1);
         thirdnode = path(i+2);
@@ -69,10 +91,10 @@ for i=1:(length(path)-1)
         firstcoord = pos(firstnode,:); % current node
         secondcoord = pos(secondnode,:);
         thirdcoord = pos(thirdnode,:);
-        zerobendrotate = 0; % boolean for a zero bend/rotate (i.e. all three nodes are collinear)
+        collinearnodes = 0; % boolean for a zero bend/rotate (i.e. all three nodes are collinear)
         doubledwire = 0; % boolean for a doubled wire (i.e. first node is same as third node)
         if round(180-rad2deg(anglebtw(thirdcoord-secondcoord,firstcoord-secondcoord))) == 0 % check if there is a zero bend/rotate
-            zerobendrotate = 1;
+            collinearnodes = 1;
         elseif firstcoord == thirdcoord % check if there is a doubled wire (i.e. first node is same as third node)
             doubledwire = 1;             
             if bendanglesign == 1
@@ -82,6 +104,7 @@ for i=1:(length(path)-1)
             end
         % Figure out if I need to pause and rotate wire, i.e. change plane 
         else
+            rotateanglesign = -bendanglesign; % rotate angle sign always opposite of previous bend angle sign (based on my CYS)
             % Compute plane of next three nodes
             nnext = cross(thirdcoord-secondcoord,firstcoord-secondcoord)/norm(cross(thirdcoord-secondcoord,firstcoord-secondcoord))*bendanglesign;
             if norm(cross(nnext,ncurrent))==0 % if plane of next three coordinates is same as machine plane
@@ -121,7 +144,7 @@ for i=1:(length(path)-1)
                             pindown = 0;
                         end
                         % Put "ROTATE __" into text file
-                        fprintf(fileID,'Rotate wire %.5f degrees\n',rotate);
+                        fprintf(fileID,'Rotate wire %.5f degrees\n',rotate*rotateanglesign);
                     end
                 end
             end
@@ -149,7 +172,7 @@ for i=1:(length(path)-1)
                     pindown = 0;
                 end
             end
-            if zerobendrotate ~= 1
+            if collinearnodes ~= 1
                 bend = 180-rad2deg(anglebtw(thirdcoord-secondcoord,firstcoord-secondcoord));
                 fprintf(fileID,'BEND %.5f\n',bend*bendanglesign);
             end
@@ -160,7 +183,7 @@ for i=1:(length(path)-1)
 end
 fclose(fileID);
 
-%% Post process to adjust each feed length using the bend angle which follows it, the bend head diameter, and the wire feedstock diameter (i.e. curvature of bend)
+%% Post process to adjust each feed length using the curvature of the bend (i.e. bend head diameter, wire feedstock diameter, and bend angle)
 fileID = fopen(filename,'r');
 txtcontent = textscan(fileID,'%s','delimiter','\n');
 txtcontent = txtcontent{1};
