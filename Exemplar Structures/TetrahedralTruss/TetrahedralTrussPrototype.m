@@ -21,6 +21,7 @@ heuristicpath = [4,5,1,6,2,7,8,2,1,4,12,1,3,2,9,8,9,...
 
 % plotblacksvg(heuristicpath,pos,4,[-60 60])
 % plotgreenarrows(geuler,heuristicpath,pos,4,15,[-60 60])
+% viewforfigures = [119.8824,29.4548];
 
 %% Parabolic tetrahedral truss
 FDratio = 0.8;

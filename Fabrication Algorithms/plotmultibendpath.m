@@ -19,9 +19,9 @@ function plotmultibendpath(gstruct,pathstruct,posstruct,pausetime,savevideo,fram
         pos = posstruct(gnum).pos;
         nodecolor = '#0072BD';
         edgecolor = '#0072BD';
-        if gnum==2
-            nodelabel = 1:numnodes(geuler);
-        end
+%         if gnum==2
+%             nodelabel = 1:numnodes(geuler);
+%         end
         pathplot = plot(geuler, 'XData', pos(:,1), 'YData', pos(:,2), 'Zdata', pos(:,3),'NodeLabel',nodelabel,'MarkerSize',3,'LineWidth',1.5,'NodeColor',nodecolor,'EdgeColor',edgecolor);
         axis equal
         if savevideo

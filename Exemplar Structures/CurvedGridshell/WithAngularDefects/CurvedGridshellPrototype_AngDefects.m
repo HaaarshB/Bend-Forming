@@ -172,7 +172,7 @@ plotbendpath(gpizza,pizzapath,pointspizza,0.1)
 % plotbendpath(gpizza,pizzapath,pointspizza,0.1,1,10,'C:\Users\harsh\Desktop\angdefectdishtest.avi',[0 90])
 
 lengthmasswire(pizzapath,pointspizza,7800,0.9)
-plotgreenarrows(gpizza,pizzapath,pointspizza,4,15,[0,90])
+plotbendpatharrows(gpizza,pizzapath,pointspizza,4,15,'black',[0,90])
 
 % MachineInstructions(pizzapath,pointspizza,"C:\Users\harsh\Desktop\dish_prototype.txt")
 

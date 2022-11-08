@@ -11,7 +11,7 @@ objfile = "C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\Stan
 [gbunny,posbunny] = facestograph(facesbunny,posbunnyog);
 % plotgraph(gbunny,posbunny)
 % plotbendpatharrows(geulerbunny,pathbunny,posbunny,4,15,[94.4 33.5])
-% plotblacksvg(pathbunny,posbunny,4,[105 10])
+% plotblacksvg(pathbunny,posbunny,4,[94.4 33.5])
 
 [geulerbunny,dupedgesbunny,edgesaddedbunny,lengthaddedbunny,pathbunny] = CPP_Algorithm(gbunny,posbunny);
 % plotbendpath(geulerbunny,pathbunny,posbunny,0.2)
@@ -33,3 +33,8 @@ objfile = "C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\Stan
 
 %% Output path for Solidworks
 % SolidworksOutput(pathbunny,posbunny,"C:\Users\harsh\Desktop\bunnySWsketch.txt")
+
+%% Plot bend path
+%plotblacksvg(pathbunny,posbunny,4,[94.4,33.5])
+plotfractionbendpath(pathbunny,posbunny,0.3,4,[94.4,33.5])
+%plotbendpatharrows(geulerbunny,pathbunny,posbunny,4,15,'black',[94.4,33.5])

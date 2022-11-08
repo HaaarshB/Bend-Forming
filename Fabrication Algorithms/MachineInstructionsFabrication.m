@@ -197,7 +197,7 @@ for i=1:size(feedlines,1)
     feedlinecontents = regexp(txtcontent(feedlineindx),'[\d*\.]*\d*','match');
     feedlengthcell = [feedlinecontents{:}];
     feedlinelength = str2double(strcat(feedlengthcell{:}));
-    if ismember(feedlineindx+1,bendlines) && feedlinelength > 1 % only change feed lines which have bend lines directly after them
+    if ismember(feedlineindx+1,bendlines) && feedlinelength > 1 % only change feed lines which have bend lines directly after them % NOT TRUE IF THERE ARE PINZ LINES
         bendlineindx = feedlineindx + 1;
         bendlinecontents = regexp(txtcontent(bendlineindx),'[\d*\.]*\d*','match');
         bendanglecell = [bendlinecontents{:}];

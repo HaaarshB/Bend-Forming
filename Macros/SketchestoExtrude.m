@@ -1,8 +1,8 @@
 clc
 clearvars
-fileID = fopen("C:\Users\harsh\Desktop\SketchestoExtrude.txt",'w');
+fileID = fopen("C:\Users\harsh\Documents\GitHub\Bend-Forming\Macros\SketchestoExtrude.txt",'w');
 
-for i=1:173
+for i=1:108
     fprintf(fileID,'"3DSketch%.0f" ',i);
 end
 

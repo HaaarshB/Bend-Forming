@@ -24,7 +24,7 @@ lengthmasswire(eulerpath2D,pos2D,7800,0.9)
 % lengthmasswire(eulerpath3D,pos3D,7800,0.9)
 
 % MachineInstructions(eulerpath2D,pos2D,"C:\Users\harsh\Desktop\isogrid_prototype.txt")
-plotgreenarrows(g2D,eulerpath2D,pos2D,4,15,[180,-90])
+plotbendpatharrows(g2D,eulerpath2D,pos2D,4,15,'green',[180,-90])
 
 %% Old stuff
 
