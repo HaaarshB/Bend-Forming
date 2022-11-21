@@ -29,7 +29,7 @@ objfile = "C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\Stan
 % [geulerbunny,dupedgesbunny,edgesaddedbunny,lengthaddedbunny,pathbunny] = CPP_Algorithm(gbunny,posbunny);
 % plotbendpath(geulerbunny,pathbunny,posbunny,0.2)
 % plotbendpath(geulerbunny,pathbunny,posbunny,0.1,1,10,"C:\Users\harsh\Desktop\Yijiang Trusses\Bunny Truss\BunnyPath.avi",[73.5,21.4])
-% MachineInstructions(pathbunny,posbunny,"C:\Users\harsh\Desktop\PathBunny.txt")
+% MachineInstructionsExact(pathbunny,posbunny,"C:\Users\harsh\Desktop\PathBunny.txt")
 
 %% Output path for Solidworks
 % SolidworksOutput(pathbunny,posbunny,"C:\Users\harsh\Desktop\bunnySWsketch.txt")

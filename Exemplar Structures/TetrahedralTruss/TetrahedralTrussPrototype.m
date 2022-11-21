@@ -4,7 +4,7 @@ addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Fabrication Algorithms")
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\TetrahedralTruss")
 
 %% Tetrahedral truss
-diameter = 100; % mm % 200
+diameter = 200; % mm % 100
 depth = 50; % mm % 25
 [g,pos] = tetrahedraltrussgraph3D(diameter,depth);
 
@@ -55,12 +55,12 @@ savevideo=0;
 framerate=10;
 filename='C:\Users\harsh\Desktop\curvedtruss_3ring.avi';
 vidangle=[-37.5,30];
-plotbendpath(geuler,heuristicpath,pos,0.1,savevideo,framerate,filename,vidangle);
+plotbendpath(geuler,eulerpath,pos,0.1,savevideo,framerate,filename,vidangle);
 
 %% Calculate mass of wire from bend path
 densitywire = 7800; % kg/m3
 diameterwire = 0.9; % mm
-lengthmasswire(heuristicpath,pos,densitywire,diameterwire);
+lengthmasswire(eulerpath,pos,densitywire,diameterwire);
 
 %% Output path for Solidworks
 SolidworksOutput(eulerpath,pos,"C:\Users\harsh\Desktop\tetratrussSW.txt")
@@ -69,4 +69,4 @@ SolidworksOutput(eulerpath,pos,"C:\Users\harsh\Desktop\tetratrussSW.txt")
 AutocadOutput(eulerpath,pos,"C:\\Users\\harsh\\Desktop\\tetratrussAC")
 
 %% Output path for DI Wire Pro
-% MachineInstructions(heuristicpath,pos,"C:\Users\harsh\Desktop\tetratruss.txt")
+% MachineInstructionsExact(heuristicpath,pos,"C:\Users\harsh\Desktop\tetratruss.txt")
