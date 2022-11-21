@@ -1,7 +1,7 @@
 Bend-Forming is a process for fabricating 3D trusses from a spool of wire feedstock.
 It combines CNC wire bending with mechanical joints to additively construct reticulated structures from wire feedstock.
 
-This repository contains fabrication and accuracy algorithms for the Bend-Forming process, developed by Harsh Bhundiya at MIT AeroAstro. 
+This repository contains fabrication and accuracy algorithms for Bend-Forming, developed by Harsh Bhundiya at MIT AeroAstro. 
 See the "Exemplar Structures" folder for examples of prototypes made with the process.
 
 Here is the Stanford bunny fabricated with Bend-Forming:
