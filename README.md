@@ -9,10 +9,8 @@ Here is the Stanford bunny fabricated with Bend-Forming:
 <img src="https://user-images.githubusercontent.com/46730108/166815930-fb4fe874-c03b-4bf9-b4a6-758ae2a42333.png" width="500" height="500">
 
 For more information on Bend-Forming, see these published articles:
-
-https://doi.org/10.1007/s11665-022-06755-y
-
-https://doi.org/10.2514/6.2022-2263
+- https://doi.org/10.1007/s11665-022-06755-y
+- https://doi.org/10.2514/6.2022-2263
 
 For the code on MathWorks File Exchange, see:
 
