@@ -14,7 +14,8 @@ if nargin < 4
 end
 
 fileID = fopen(filename,'w');
-% COLLINEAR NODES IN BEGINNING OF PATH
+
+% COLLINEAR NODES IN BEGINNING OF PATH (fed first before calculating plane ncurrent)
 lastcollinearnode = 1;
 while lastcollinearnode < (length(path)-1)
     firstnode = path(lastcollinearnode);
@@ -32,8 +33,8 @@ while lastcollinearnode < (length(path)-1)
     end
 end
 for i=lastcollinearnode:(length(path)-1)
-    % FIRST NODE OF PATH
-    if i==lastcollinearnode
+    % FIRST NODE AFTER ALL COLLINEAR NODES
+    if i==lastcollinearnode && length(path)~=2
         firstnode = path(i);
         secondnode = path(i+1);
         thirdnode = path(i+2);
@@ -52,7 +53,8 @@ for i=lastcollinearnode:(length(path)-1)
         if round(bend)~=0
             fprintf(fileID,'BEND %.5f\n',bend);
         end
-        ncurrent = cross(thirdcoord-secondcoord,firstcoord-secondcoord)/norm(cross(thirdcoord-secondcoord,firstcoord-secondcoord)); % plane of first three nodes
+        % Plane of first three nodes (after all collinear nodes have been fed)
+        ncurrent = cross(thirdcoord-secondcoord,firstcoord-secondcoord)/norm(cross(thirdcoord-secondcoord,firstcoord-secondcoord));
         bendanglesign = 1; % starts with a postiive bend angle
     % SECOND TO LAST NODE OF PATH
     elseif i==(length(path)-1)
@@ -120,7 +122,8 @@ for i=lastcollinearnode:(length(path)-1)
                 end
                 if round(rotate)~=0
                     % Put "ROTATE __" into text file
-                    fprintf(fileID,'Rotate wire %.5f degrees\n',rotate*rotateanglesign);
+                    % fprintf(fileID,'Rotate wire %.5f degrees\n',rotate*rotateanglesign);
+                    fprintf(fileID,'ROTATE %.5f\n',rotate*rotateanglesign);
                 end
             end
         end

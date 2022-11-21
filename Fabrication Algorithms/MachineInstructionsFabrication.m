@@ -8,9 +8,9 @@ function MachineInstructionsFabrication(path,pos,filename,commentbool,pinzbool,b
 
 % FABRICATION machine instructions means that the code includes additional 
 % features to help with fabrication, such as:
-%   Avoid rotations < 10 deg or > 170 deg (see lines 98-116); 
-%   Move bend head up and down with PINZ command to avoid collision while rotating (see lines 117-147);
-%   Adjust feed for wire diameter and bend head radius (see lines 163-186);
+%   Avoid rotations < 10 deg or > 170 deg (see lines 121-146); 
+%   Move bend head up and down with PINZ command to avoid collision while rotating (see lines 140-144, 168-175);
+%   Adjust feed for wire diameter and bend head radius (see lines 188-210);
 
 if nargin < 4
     commentbool = 0; % Boolean for adding node number comments before each FEED line
@@ -23,7 +23,7 @@ elseif nargin > 4 && nargin < 6
 end
 
 fileID = fopen(filename,'w');
-% COLLINEAR NODES IN BEGINNING OF PATH
+% COLLINEAR NODES IN BEGINNING OF PATH (fed first before calculating plane ncurrent)
 lastcollinearnode = 1;
 while lastcollinearnode < (length(path)-1)
     firstnode = path(lastcollinearnode);
@@ -45,8 +45,8 @@ while lastcollinearnode < (length(path)-1)
     end
 end
 for i=lastcollinearnode:(length(path)-1)
-    % FIRST NODE OF PATH
-    if i==lastcollinearnode
+    % FIRST NODE AFTER ALL COLLINEAR NODES
+    if i==lastcollinearnode && length(path)~=2
         firstnode = path(i);
         secondnode = path(i+1);
         thirdnode = path(i+2);
@@ -65,7 +65,8 @@ for i=lastcollinearnode:(length(path)-1)
         if round(bend)~=0
             fprintf(fileID,'BEND %.5f\n',bend);
         end
-        ncurrent = cross(thirdcoord-secondcoord,firstcoord-secondcoord)/norm(cross(thirdcoord-secondcoord,firstcoord-secondcoord)); % plane of first three nodes
+        % Plane of first three nodes (after all collinear nodes have been fed)
+        ncurrent = cross(thirdcoord-secondcoord,firstcoord-secondcoord)/norm(cross(thirdcoord-secondcoord,firstcoord-secondcoord));
         bendanglesign = 1; % starts with a postiive bend angle
         prevbendanglesign = bendanglesign;
         prevdoubledwire = 0;
@@ -144,7 +145,8 @@ for i=lastcollinearnode:(length(path)-1)
                             pindown = 0;
                         end
                         % Put "ROTATE __" into text file
-                        fprintf(fileID,'Rotate wire %.5f degrees\n',rotate*rotateanglesign);
+                        % fprintf(fileID,'Rotate wire %.5f degrees\n',rotate*rotateanglesign);
+                        fprintf(fileID,'ROTATE %.5f\n',rotate*rotateanglesign);
                     end
                 end
             end
@@ -197,7 +199,7 @@ for i=1:size(feedlines,1)
     feedlinecontents = regexp(txtcontent(feedlineindx),'[\d*\.]*\d*','match');
     feedlengthcell = [feedlinecontents{:}];
     feedlinelength = str2double(strcat(feedlengthcell{:}));
-    if ismember(feedlineindx+1,bendlines) && feedlinelength > 1 % only change feed lines which have bend lines directly after them % NOT TRUE IF THERE ARE PINZ LINES
+    if ismember(feedlineindx+1,bendlines) && feedlinelength > 1 % only change feed lines which have bend lines directly after them % DOESN'T WORK IF THERE ARE PINZ LINES
         bendlineindx = feedlineindx + 1;
         bendlinecontents = regexp(txtcontent(bendlineindx),'[\d*\.]*\d*','match');
         bendanglecell = [bendlinecontents{:}];
