@@ -1,5 +1,5 @@
 This folder contains fabrication algorithms of Bend-Forming.
-A brief description of the important functions is provided below.
+A brief description of important functions is provided below.
 
 ***Fabrication functions:***
 - CPP_Algorithm - calculates a continuous bend path for a given truss geometry by adding doubled edges and finding an Euler path
