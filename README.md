@@ -15,8 +15,4 @@ For more information on Bend-Forming, see these published articles:
 - H.G. Bhundiya, J.Z. Zhang, K.D. Overby, F. Royer, J.H. Lang, Z.C. Cordero, W.F. Moulder, S.K. Jeon, and M.J. Silver, “Electrostatically Actuated X-Band Mesh Reflector with Bend-Formed Support Structure,” AIAA Scitech Forum 2023, January 23-27 (National Harbor, MD & Virtual), AIAA, 2023.
 - H.G. Bhundiya and Z.C. Cordero, "Bend-Forming: A CNC Deformation Process for Fabricating 3D Wireframe Structures," Additive Manufacturing Letters (in review).
 
-For the code on MathWorks File Exchange, see:
-
-https://www.mathworks.com/matlabcentral/fileexchange/111195-bend-forming-algorithms
-
 © Copyright 2023
