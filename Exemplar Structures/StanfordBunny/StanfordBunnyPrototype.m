@@ -13,7 +13,8 @@ objfile = "C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\Stan
 % plotbendpatharrows(geulerbunny,pathbunny,posbunny,4,15,[94.4 33.5])
 % plotblacksvg(pathbunny,posbunny,4,[94.4 33.5])
 
-[geulerbunny,dupedgesbunny,edgesaddedbunny,lengthaddedbunny,pathbunny] = CPP_Algorithm(gbunny,posbunny);
+% [geulerbunny,dupedgesbunny,edgesaddedbunny,lengthaddedbunny,pathbunny] = CPP_Algorithm(gbunny,posbunny);
+[geuler,dupedges,edgesadded,lengthadded,eulerpath] = CPP_Algorithm_Fluery_Greedy(gbunny,posbunny);
 % plotbendpath(geulerbunny,pathbunny,posbunny,0.2)
 % plotbendpath(geulerbunny,pathbunny,posbunny,0.2,1,10,"C:\Users\harsh\Desktop\bunnybendpathvideo.avi",[-235,25])
 % MachineInstructions(pathbunny,posbunny,"C:\Users\harsh\Desktop\pathbunnytest.txt")
