@@ -2,7 +2,7 @@ Bend-Forming is a computer numerical control (CNC) deformation process for fabri
 It combines CNC wire bending with mechanical joints to construct reticulated structures from a spool of wire feedstock.
 
 This repository contains fabrication and accuracy algorithms for Bend-Forming, developed by Harsh G. Bhundiya at MIT AeroAstro. 
-See the "Exemplar Structures" folder for examples of prototypes made with the process. For questions and comments, contact bhundiya@mit.edu.
+See the "Exemplary Structures" folder for examples of prototypes made with the process. For questions and comments, contact bhundiya@mit.edu.
 
 Here is the Stanford bunny fabricated with Bend-Forming:
 
