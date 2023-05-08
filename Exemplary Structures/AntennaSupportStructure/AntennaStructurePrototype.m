@@ -1,7 +1,7 @@
 clc
 clearvars
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Fabrication Algorithms")
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\TrussHoop")
+addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\TrussHoop")
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Mesh Tools\distmesh")
 addpath("C:\Users\harsh\Desktop\Mesh Reflector\JulyPrototype")
 

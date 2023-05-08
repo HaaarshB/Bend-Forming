@@ -1,7 +1,7 @@
 clearvars
 close all
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Fabrication Algorithms")
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\TetrahedralTruss")
+addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\TetrahedralTruss")
 
 %% Tetrahedral truss
 diameter = 200; % mm % 100

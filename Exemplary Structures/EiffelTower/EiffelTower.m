@@ -4,7 +4,7 @@ close all
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Fabrication Algorithms")
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Mesh Tools")
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Mesh Tools\jsonlab-master")
-objfile = "C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\EiffelTower\EiffelTower_400Faces_Scaled400mm.obj";
+objfile = "C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\EiffelTower\EiffelTower_400Faces_Scaled400mm.obj";
 bendpathfile = "C:\Users\harsh\Desktop\EiffelTowerPath.txt";
 [facestower,postowerog] = readObj(objfile);
 [gtower,postower] = facestograph(facestower,postowerog);

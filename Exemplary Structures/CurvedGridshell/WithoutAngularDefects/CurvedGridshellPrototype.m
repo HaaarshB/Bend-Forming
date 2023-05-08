@@ -1,7 +1,7 @@
 clc
 clearvars
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Fabrication Algorithms")
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\CurvedGridshell\WithoutAngularDefects")
+addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\CurvedGridshell\WithoutAngularDefects")
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Mesh Tools\distmesh")
 
 %% Paraboloid dish
@@ -52,9 +52,9 @@ time = toc;
 % Plot solution to CPP algorithm
 % plotbendpath(geuler,eulerpath,pos,0.2,1,10,"C:\Users\harsh\Desktop\FabTesting\Dish\dishcurvedbendpathvideo_top_fast.avi",[0,90])
 % plotbendpath(geuler,eulerpath,pos,0.2,1,10,"C:\Users\harsh\Desktop\FabTesting\Dish\dishcurvedbendpathvideo_side_fast.avi",[-90,20])
-% plotbendpath(geuler,eulerpath,pos,0.05)
-plotbendpatharrows(geuler,eulerpath,pos,4,15,[0 90])
-plotblacksvg(eulerpath,pos,4,[0 90])
+plotbendpath(geuler,eulerpath,pos,0.05)
+% plotbendpatharrows(geuler,eulerpath,pos,4,15,[0 90])
+% plotblacksvg(eulerpath,pos,4,[0 90])
 
 %% Output to DI wire 
 % MachineInstructions(eulerpath,pos,"C:\Users\harsh\Desktop\FabTesting\Dish\dishcurved.txt",1,1)

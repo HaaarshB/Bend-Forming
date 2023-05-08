@@ -4,8 +4,8 @@ close all
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Fabrication Algorithms")
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Mesh Tools")
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Mesh Tools\jsonlab-master")
-% objfile = "C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\Teapot\PotLid\Teapot_124Faces_Scaled1.25.obj";
-objfile = "C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\Teapot\OneSolid\Teapot_123Faces_Final.obj";
+% objfile = "C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\UathTeapot\PotLid\Teapot_124Faces_Scaled1.25.obj";
+objfile = "C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\UtahTeapot\OneSolid\Teapot_123Faces_Final.obj";
 bendpathfile = "C:\Users\harsh\Desktop\TeapotFab.txt";
 [facesteapot,posteapotog] = readObj(objfile);
 [gteapot,posteapot] = facestograph(facesteapot,posteapotog);

@@ -1,7 +1,7 @@
 clearvars
 close all
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Fabrication Algorithms")
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\TrussHoop")
+addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\TrussHoop")
 
 %% Isogrid hoop
 router = 500; % 185 % outer radius in mm (of torus)

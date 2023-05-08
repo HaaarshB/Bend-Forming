@@ -5,8 +5,8 @@ addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Fabrication Algorithms")
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Accuracy Model")
 
 %% STEP 1: Load truss geometry with bend path - Stanford bunny
-load("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\StanfordBunny\20220316bunnyworkspace.mat")
-bendpathfile = "C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\StanfordBunny\AccuracyTest_BunnyPath.txt";
+load("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\StanfordBunny\20220316bunnyworkspace.mat")
+bendpathfile = "C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\StanfordBunny\AccuracyTest_BunnyPath.txt";
 MachineInstructionsExact(pathbunny,posbunny,bendpathfile,0)
 
 %% STEP 2: Generate imperfect geometry with fabrication defects

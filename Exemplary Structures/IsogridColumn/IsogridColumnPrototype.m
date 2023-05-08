@@ -1,7 +1,7 @@
 clearvars
 close all
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Fabrication Algorithms")
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplar Structures\IsogridColumn")
+addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\IsogridColumn")
 
 %% Input truss parameters
 r = 100; % column radius in mm

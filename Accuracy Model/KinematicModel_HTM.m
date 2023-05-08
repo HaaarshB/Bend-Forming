@@ -1,8 +1,6 @@
 function [perfnodes, impnodes, curvenodes, bendpathtxt, randomoffsetsflip] = KinematicModel_HTM(bendpathfile,dcurve,dfeed,dbend,drotate,mucurve,mufeed,mubend,murotate,sigcurve,sigfeed,sigbend,sigrotate,thetapoints)
 %% Function to calculate an imperfect Bend-Formed truss using the tolerances of individual fabrication steps (i.e. feeding, bending, rotating)
 % Recreates a series of machine instructions for a 2-DOF CNC wire bender BUT with tolerances of individual steps to model an imperfect structure.
-% The tolerances are constants which represent the magnitude of an imperfection during feeding (dfeed and dcurve), bending (dbend), and rotating (drotate) the wire feedstock.
-% NOTE: tolerances are not stocahstic or random. They are the same value for each type of machine instruction.
 
 % CONSIDERS BOTH SYSTEMATIC AND RANDOM MACHINE ERRORS
 % SYSTEMATIC ERRORS:
@@ -71,6 +69,7 @@ function [perfnodes, impnodes, curvenodes, bendpathtxt, randomoffsetsflip] = Kin
                 if dfeed ~= 0 || mufeed ~= 0 || sigfeed ~= 0 % add feed tolerance to feedlength
                     impfeedlength = feedlength + dfeed + randomoffsets(line,1); % both systematic and random error
                 end
+                % Feed along +y axis
                 perffeedHTM = [1,0,0,0;0,1,0,feedlength;0,0,1,0;0,0,0,1];
                 impfeedHTM = [1,0,0,0;0,1,0,impfeedlength;0,0,1,0;0,0,0,1];
                 perfHTM = perffeedHTM * perfHTM ; % update perfect and imperfect HTMs
@@ -96,7 +95,7 @@ function [perfnodes, impnodes, curvenodes, bendpathtxt, randomoffsetsflip] = Kin
                     perfHTM = perfbendHTM * perfHTM;
                     impHTM = impbendHTM * impHTM;
                 end
-            elseif contains(linetxt,'Rotate')
+            elseif contains(linetxt,'Rotate') % Lower case "Rotate" line means the angle is defined positive away from the fabrication plane (so sign changes during fabrication)
                 thetarotate = regexp(linetxt,'\d+\.?\d*','match');
                 thetarotate = str2double(thetarotate{1}); % if machine instructions have only positive rotations defined away from the fabrication plane
                 impthetarotate = thetarotate + drotate + randomoffsets(line,1);
@@ -113,7 +112,7 @@ function [perfnodes, impnodes, curvenodes, bendpathtxt, randomoffsetsflip] = Kin
                     perfHTM = perfrotateHTM * perfHTM;
                     impHTM = improtateHTM * impHTM;
                 end
-            elseif contains(linetxt,'ROTATE')
+            elseif contains(linetxt,'ROTATE') % Upper case "ROTATE" line means the angle is always defined positive about the +y axis (feeding axis)
                 thetarotate = regexp(linetxt,'(+|-)?\d+\.?\d*','match');
                 thetarotate = str2double(thetarotate{1}); % if machine instructions have positive or negative rotations about feedstock axis (+y axis)
                 impthetarotate = thetarotate + drotate + randomoffsets(line,1);
