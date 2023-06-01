@@ -18,7 +18,7 @@ MachineInstructionsExact(pathbunny,posbunny,bendpathfile,0)
 
 % Systematic errors
 dcurve = 0.03; % dcurve*100 is [%]
-dfeed = 0; % [mm]
+dfeed = 10; % [mm]
 dbend = 0; % [o]
 drotate = 0; % [o]
 % Random errors

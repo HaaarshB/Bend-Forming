@@ -14,13 +14,13 @@ addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\Stanf
 
 %% 2D FRACTAL TRIANGLE
 % similar to Sierpinksi triangle (https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle) with middle triangle removed
-nunits = 5; % 5 for small, 20 for large
+nunits = 10; % 5 for small, 20 for large
 sidelength = 20; % [mm]
 [g,pos] = FractalTriangle2Dgraph(nunits,sidelength);
 plotgraph(g,pos)
 
 %% CURVED GRIDSHELL
-D = 150; % Diameter
+D = 1000; % Diameter
 FDratio = 0.3; % FD ratio
 F = D * FDratio; % Focal length
 H = D^2/(16*F); % Height of paraboloid
