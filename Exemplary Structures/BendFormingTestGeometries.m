@@ -1,21 +1,21 @@
 clc
 clearvars
 close all
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Fabrication Algorithms")
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Mesh Tools")
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Mesh Tools\distmesh")
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Mesh Tools\jsonlab-master")
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\FractalTriangle")
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\IsogridColumn")
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\CurvedGridshell\WithoutAngularDefects")
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\TetrahedralTruss")
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\TrussHoop")
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\StanfordBunny\BunnyMeshes")
+addpath("C:\Users\harsh\OneDrive\Documents\GitHub\Bend-Forming\Fabrication Algorithms")
+addpath("C:\Users\harsh\OneDrive\Documents\GitHub\Bend-Forming\Mesh Tools")
+addpath("C:\Users\harsh\OneDrive\Documents\GitHub\Bend-Forming\Mesh Tools\distmesh")
+addpath("C:\Users\harsh\OneDrive\Documents\GitHub\Bend-Forming\Mesh Tools\jsonlab-master")
+addpath("C:\Users\harsh\OneDrive\Documents\GitHub\Bend-Forming\Exemplary Structures\FractalTriangle")
+addpath("C:\Users\harsh\OneDrive\Documents\GitHub\Bend-Forming\Exemplary Structures\IsogridColumn")
+addpath("C:\Users\harsh\OneDrive\Documents\GitHub\Bend-Forming\Exemplary Structures\CurvedGridshell\WithoutAngularDefects")
+addpath("C:\Users\harsh\OneDrive\Documents\GitHub\Bend-Forming\Exemplary Structures\TetrahedralTruss")
+addpath("C:\Users\harsh\OneDrive\Documents\GitHub\Bend-Forming\Exemplary Structures\TrussHoop")
+addpath("C:\Users\harsh\OneDrive\Documents\GitHub\Bend-Forming\Exemplary Structures\StanfordBunny\BunnyMeshes")
 
 %% 2D FRACTAL TRIANGLE
 % similar to Sierpinksi triangle (https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle) with middle triangle removed
-nunits = 10; % 5 for small, 20 for large
-sidelength = 20; % [mm]
+nunits = 2; % 5 for small, 20 for large
+sidelength = 2000; % [mm]
 [g,pos] = FractalTriangle2Dgraph(nunits,sidelength);
 plotgraph(g,pos)
 
@@ -147,8 +147,8 @@ tic;
 [geuler,dupedges,edgesadded,lengthadded,eulerpath] = CPP_Algorithm(g,pos); % random Hierholzer algorithm - classic method of finding Euler path
 CPPtime = toc;
 % plotbendpath(geuler,eulerpath,pos,0.1)
-% plotbendpath(geuler,eulerpath,pos,0.01,1,50,"C:\Users\harsh\Desktop\Test.avi",[0 90])
-plotbendpathwCM(geuler,eulerpath,pos,0.01,1,50,"C:\Users\harsh\Desktop\Test.avi",[0 90])
+% plotbendpath(geuler,eulerpath,pos,0.01,1,50,"C:\Users\harsh\OneDrive\Desktop\Test.avi",[0 90])
+plotbendpathwCM(geuler,eulerpath,pos,0.01,1,50,"C:\Users\harsh\OneDrive\Desktop\Test.avi",[0 90])
 
 % Calculate mass of wire from bend path
 densitywire = 7800; % kg/m3
@@ -158,7 +158,7 @@ lengthmasswire(eulerpath,pos,densitywire,diameterwire);
 
 %% Write machine instructions to test bend path physically
 pathtomake = eulerpath;
-MachineInstructionsExact(pathtomake,pos,"C:\Users\harsh\Desktop\Test.txt",0)
+MachineInstructionsExact(pathtomake,pos,"C:\Users\harsh\OneDrive\Desktop\Test.txt",0)
 % MachineInstructionsFabrication(eulerpath,pos,"C:\Users\harsh\Desktop\Test.txt",0,0,diameterbendhead,diameterwire)
-MachinePathCoordinatesCSV(pathtomake,pos,"C:\Users\harsh\Desktop\Test.csv")
-save("C:\Users\harsh\Desktop\Test.mat")
+% MachinePathCoordinatesCSV(pathtomake,pos,"C:\Users\harsh\OneDrive\Desktop\Test.csv")
+% save("C:\Users\harsh\Desktop\Test.mat")

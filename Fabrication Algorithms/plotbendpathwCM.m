@@ -5,7 +5,7 @@ function plotbendpathwCM(geuler,eulerpath,pos,pausetime,savevideo,framerate,file
         filename = [];
     end
     if savevideo
-        writerObj3D = VideoWriter(filename);
+        writerObj3D = VideoWriter(filename,'MPEG-4');
         writerObj3D.FrameRate = framerate;
         open(writerObj3D);
         nodelabel = {};
