@@ -6,7 +6,7 @@ function [geulerian,dupedges,edgesadded,lengthadded] = MakeEulerian(g,pos)
 
 geulerian = g;
 oddvertices = find(mod(degree(g),2)==1); % find nodes with odd number of connections
-numpathstoadd = length(oddvertices)/2-1;
+numpathstoadd = length(oddvertices)/2; % length(oddvertices)/2-1 for all but two nodes with odd degree
 dupedges = 0;
 edgesadded = [0,0];
 lengthadded = 0;

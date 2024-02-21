@@ -9,20 +9,20 @@ function AutocadOutput(path,pos,filename)
         node1 = path(i);
         node2 = path(i+1);
         if sum(ismember(edgesadded,[node1,node2],'rows'))==0 && sum(ismember(edgesadded,[node2,node1],'rows'))==0
-            fprintf(fileID,'%.4f,',pos(node1,1));
-            fprintf(fileID,'%.4f,',pos(node1,2));
-            fprintf(fileID,'%.4f\n',pos(node1,3));
+            fprintf(fileID,'%.6f,',pos(node1,1));
+            fprintf(fileID,'%.6f,',pos(node1,2));
+            fprintf(fileID,'%.6f\n',pos(node1,3));
             edgesadded(i,:) = [node1, node2];
         else
-            fprintf(fileID,'%.4f,',pos(node1,1));
-            fprintf(fileID,'%.4f,',pos(node1,2));
-            fprintf(fileID,'%.4f\n',pos(node1,3));
+            fprintf(fileID,'%.6f,',pos(node1,1));
+            fprintf(fileID,'%.6f,',pos(node1,2));
+            fprintf(fileID,'%.6f\n',pos(node1,3));
             fprintf(fileID,'\n3DPOLY\n');
         end
     end
-    fprintf(fileID,'%.4f,',pos(node2,1));
-    fprintf(fileID,'%.4f,',pos(node2,2));
-    fprintf(fileID,'%.4f\n\n',pos(node2,3));
+    fprintf(fileID,'%.6f,',pos(node2,1));
+    fprintf(fileID,'%.6f,',pos(node2,2));
+    fprintf(fileID,'%.6f\n\n',pos(node2,3));
     fprintf(fileID,'EXPORT\n');
     fprintf(fileID,append(filename,".iges\n"));
     fprintf(fileID,'Y\n');

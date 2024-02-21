@@ -114,7 +114,7 @@ end
 %     end
 % end
 
-plotbendpathwCM(g,heuristicpath,pos,0.01,1,50,"C:\Users\harsh\Desktop\Test.avi",[0 90])
+plotbendpathwCM(g,heuristicpath,pos,0.01,1,50,"C:\Users\harsh\Desktop\Test.mp4",[0 90])
 
 %% TRUSS HOOP
 rinner = 25; % inner radius in mm (of column cross section)
@@ -127,7 +127,7 @@ sidenum = 1; % sidelengths along circumference
 avgbaysidelength(pos,ninner);
 plotgraph(g,pos)
 heuristicpath = heuristicpathtrusshoop(ninner,nouter,sidenum);
-plotbendpathwCM(g,heuristicpath,pos,0.01,1,50,"C:\Users\harsh\Desktop\Test.avi",[0 90])
+plotbendpathwCM(g,heuristicpath,pos,0.01,1,50,"C:\Users\harsh\Desktop\Test.mp4",[0 90])
 
 %% TETRAHEDRAL TRUSS
 diameter = 30; % mm % 100
@@ -145,10 +145,15 @@ plotgraph(g,pos)
 %% Compute bend path through geometry
 tic;
 [geuler,dupedges,edgesadded,lengthadded,eulerpath] = CPP_Algorithm(g,pos); % random Hierholzer algorithm - classic method of finding Euler path
+% [geuler,dupedges,edgesadded,lengthadded,eulerpath] = CPP_Algorithm_Hierholzer_Greedy(g,pos);
+% [geuler,dupedges,edgesadded,lengthadded,eulerpath] = CPP_Algorithm_Fluery_Greedy_Compact(g,pos); % picks next node in the Euler path to be closest to previous node in the path
+% [geuler,dupedges,edgesadded,lengthadded,eulerpath] = CPP_Algorithm_Fluery_Greedy_Sparse(g,pos); % picks next node in the Euler path to be furthest away from previous node in the path
+% [geuler,dupedges,edgesadded,lengthadded,eulerpath] = CPP_Algorithm_Fluery_Greedy_CM_Compact(g,pos); % picks next node in the Euler path to be closest to centroid of all previous nodes in the path
+% [geuler,dupedges,edgesadded,lengthadded,eulerpath] = CPP_Algorithm_Fluery_Greedy_CM_Sparse(g,pos); % picks next node in the Euler path to be furthest away from centroid of all previous nodes in the path
 CPPtime = toc;
 % plotbendpath(geuler,eulerpath,pos,0.1)
-% plotbendpath(geuler,eulerpath,pos,0.01,1,50,"C:\Users\harsh\OneDrive\Desktop\Test.avi",[0 90])
-plotbendpathwCM(geuler,eulerpath,pos,0.01,1,50,"C:\Users\harsh\OneDrive\Desktop\Test.avi",[0 90])
+% plotbendpath(geuler,eulerpath,pos,0.01,1,50,"C:\Users\harsh\OneDrive\Desktop\Test.mp4",[0 90])
+plotbendpathwCM(geuler,eulerpath,pos,0.01,1,50,"C:\Users\harsh\OneDrive\Desktop\Test.mp4",[0 90])
 
 % Calculate mass of wire from bend path
 densitywire = 7800; % kg/m3

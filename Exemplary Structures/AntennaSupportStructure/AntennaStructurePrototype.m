@@ -3,7 +3,7 @@ clearvars
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Fabrication Algorithms")
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\TrussHoop")
 addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Mesh Tools\distmesh")
-addpath("C:\Users\harsh\Desktop\Mesh Reflector\JulyPrototype")
+addpath("C:\Users\harsh\OneDrive\Documents\WIRE BENDING\Papers\Scitech 2023\Spring2022Fall2022_MeshReflectorUpdates\SEPTEMBER_ANTENNA_TEST_PROTOTYPES\SeptemberAntennaPrototypeMarkIII")
 
 %% Paraboloid dish
 % % QUARTER SIZE
@@ -171,6 +171,8 @@ end
 matchednodes(1,:) = [];
 
 %% Plot
+poscommand = 10*poscommand;
+poshoop = 10*poshoop;
 nodelabelhoop = 1:numnodes(ghoop); % 1:numnodes(ghoop)
 nodelabelcommand = 1:numnodes(gcommandeuler); % 1:numnodes(gcommandeuler)
 figure()
@@ -197,9 +199,9 @@ pathstruct(2).path = bendpathcommand;
 posstruct(1).pos = poshoop;
 posstruct(2).pos = poscommand;
 
-savevideo=0;
+savevideo=1;
 framerate=10;
-filename='C:\Users\harsh\Desktop\FinalGeometryPath.avi';
+filename='C:\Users\harsh\OneDrive\Desktop\FinalGeometryPath.mp4';
 vidangle=[-45,45];
 plotmultibendpath(gstruct,pathstruct,posstruct,[0.01,0.05],savevideo,framerate,filename,vidangle)
 

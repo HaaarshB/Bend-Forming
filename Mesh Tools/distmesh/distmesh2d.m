@@ -56,6 +56,8 @@ function [p,t]=distmesh2d(fd,fh,h0,bbox,pfix,varargin)
 %   distmesh2d.m v1.1
 %   Copyright (C) 2004-2012 Per-Olof Persson. See COPYRIGHT.TXT for details.
 
+% NOTE: COMMENTED LINES 80,93,94,129 TO STOP PLOTTING
+
 dptol=.001; ttol=.1; Fscale=1.2; deltat=.2; geps=.001*h0; deps=sqrt(eps)*h0;
 densityctrlfreq=30;
 
@@ -75,7 +77,7 @@ N=size(p,1);                                         % Number of points N
 
 count=0;
 pold=inf;                                            % For first iteration
-clf,view(2),axis equal,axis off
+% clf,view(2),axis equal,axis off
 while 1
   count=count+1;
   % 3. Retriangulation by the Delaunay algorithm
@@ -88,11 +90,11 @@ while 1
     bars=[t(:,[1,2]);t(:,[1,3]);t(:,[2,3])];         % Interior bars duplicated
     bars=unique(sort(bars,2),'rows');                % Bars as node pairs
     % 5. Graphical output of the current mesh
-    cla,patch('vertices',p,'faces',t,'edgecol','k','facecol',[.8,.9,1]);
-    drawnow
+    % cla,patch('vertices',p,'faces',t,'edgecol','k','facecol',[.8,.9,1]); 
+    % drawnow
   end
 
-  % 6. Move mesh points based on bar lengths L and forces F
+  % 6. Move mesh points based on bar lengths L and forces 
   barvec=p(bars(:,1),:)-p(bars(:,2),:);              % List of bar vectors
   L=sqrt(sum(barvec.^2,2));                          % L = Bar lengths
   hbars=feval(fh,(p(bars(:,1),:)+p(bars(:,2),:))/2,varargin{:});
@@ -124,4 +126,4 @@ end
 
 % Clean up and plot final mesh
 [p,t]=fixmesh(p,t);
-simpplot(p,t)
+% simpplot(p,t)

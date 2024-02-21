@@ -2,7 +2,7 @@ function [g,pos] = tetrahedraltrussgraph3D(diameter,depth)
 
 % From tetrahedral truss geometry (see Lake 2002 paper)
 sidelength = sqrt(3/2)*depth;
-nrings = ceil((diameter-sidelength)/(2*sidelength));
+nrings = nearest((diameter-sidelength)/(2*sidelength));
 
 syms k
 numnodes = double(symsum(3*(2*k+1),k,0,nrings));
