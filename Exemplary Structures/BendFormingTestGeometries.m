@@ -114,7 +114,7 @@ end
 %     end
 % end
 
-plotbendpathwCM(g,heuristicpath,pos,0.01,1,50,"C:\Users\harsh\Desktop\Test.mp4",[0 90])
+plotbendpathwCM(g,heuristicpath,pos,0.01,1,50,"C:\Users\harsh\OneDrive\Desktop\Test.mp4",[0 90])
 
 %% TRUSS HOOP
 rinner = 25; % inner radius in mm (of column cross section)
@@ -127,7 +127,7 @@ sidenum = 1; % sidelengths along circumference
 avgbaysidelength(pos,ninner);
 plotgraph(g,pos)
 heuristicpath = heuristicpathtrusshoop(ninner,nouter,sidenum);
-plotbendpathwCM(g,heuristicpath,pos,0.01,1,50,"C:\Users\harsh\Desktop\Test.mp4",[0 90])
+plotbendpathwCM(g,heuristicpath,pos,0.01,1,50,"C:\Users\harsh\OneDrive\Desktop\Test.mp4",[0 90])
 
 %% TETRAHEDRAL TRUSS
 diameter = 30; % mm % 100
@@ -137,7 +137,7 @@ plotgraph(g,pos)
 
 %% STANFORD BUNNY
 % Load low-poly bunny from OBJ file
-objfile = "C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\StanfordBunny\BunnyMeshes\BunnyPolygonScaledHalf.obj";
+objfile = "C:\Users\harsh\OneDrive\Documents\GitHub\Bend-Forming\Exemplary Structures\StanfordBunny\BunnyMeshes\BunnyPolygonScaledHalf.obj";
 [facesbunny,posbunnyog] = readObj(objfile);
 [g,pos] = facestograph(facesbunny,posbunnyog);
 plotgraph(g,pos)
@@ -152,8 +152,8 @@ tic;
 % [geuler,dupedges,edgesadded,lengthadded,eulerpath] = CPP_Algorithm_Fluery_Greedy_CM_Sparse(g,pos); % picks next node in the Euler path to be furthest away from centroid of all previous nodes in the path
 CPPtime = toc;
 % plotbendpath(geuler,eulerpath,pos,0.1)
-% plotbendpath(geuler,eulerpath,pos,0.01,1,50,"C:\Users\harsh\OneDrive\Desktop\Test.mp4",[0 90])
-plotbendpathwCM(geuler,eulerpath,pos,0.01,1,50,"C:\Users\harsh\OneDrive\Desktop\Test.mp4",[0 90])
+% plotbendpath(geuler,eulerpath,pos,0.01,1,50,"C:\Users\harsh\OneDrive\Desktop\Test.mp4",[95 33])
+plotbendpathwCM(geuler,eulerpath,pos,0.01,1,50,"C:\Users\harsh\OneDrive\Desktop\Test.mp4",[95 33])
 
 % Calculate mass of wire from bend path
 densitywire = 7800; % kg/m3
@@ -163,7 +163,7 @@ lengthmasswire(eulerpath,pos,densitywire,diameterwire);
 
 %% Write machine instructions to test bend path physically
 pathtomake = eulerpath;
-MachineInstructionsExact(pathtomake,pos,"C:\Users\harsh\OneDrive\Desktop\Test.txt",0)
-% MachineInstructionsFabrication(eulerpath,pos,"C:\Users\harsh\Desktop\Test.txt",0,0,diameterbendhead,diameterwire)
-% MachinePathCoordinatesCSV(pathtomake,pos,"C:\Users\harsh\OneDrive\Desktop\Test.csv")
-% save("C:\Users\harsh\Desktop\Test.mat")
+MachineInstructionsExact(pathtomake,pos,"C:\Users\harsh\OneDrive\OneDrive\Desktop\Test.txt",0)
+% MachineInstructionsFabrication(eulerpath,pos,"C:\Users\harsh\OneDrive\OneDrive\Desktop\Test.txt",0,0,diameterbendhead,diameterwire)
+% MachinePathCoordinatesCSV(pathtomake,pos,"C:\Users\harsh\OneDrive\OneDrive\OneDrive\Desktop\Test.csv")
+% save("C:\Users\harsh\OneDrive\Desktop\Test.mat")

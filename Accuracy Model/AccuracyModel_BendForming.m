@@ -1,12 +1,12 @@
 clc
 close all
 clearvars
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Fabrication Algorithms")
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Accuracy Model")
+addpath("C:\Users\harsh\OneDrive\Documents\GitHub\Bend-Forming\Fabrication Algorithms")
+addpath("C:\Users\harsh\OneDrive\Documents\GitHub\Bend-Forming\Accuracy Model")
 
 %% STEP 1: Load truss geometry with bend path - Stanford bunny
-load("C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\StanfordBunny\20220316bunnyworkspace.mat")
-bendpathfile = "C:\Users\harsh\Documents\GitHub\Bend-Forming\Exemplary Structures\StanfordBunny\AccuracyTest_BunnyPath.txt";
+load("C:\Users\harsh\OneDrive\Documents\GitHub\Bend-Forming\Exemplary Structures\StanfordBunny\20220316bunnyworkspace.mat")
+bendpathfile = "C:\Users\harsh\OneDrive\Documents\GitHub\Bend-Forming\Exemplary Structures\StanfordBunny\AccuracyTest_BunnyPath.txt";
 MachineInstructionsExact(pathbunny,posbunny,bendpathfile,0)
 
 %% STEP 2: Generate imperfect geometry with fabrication defects
@@ -17,8 +17,8 @@ MachineInstructionsExact(pathbunny,posbunny,bendpathfile,0)
 % Note here the bend and rotate angular errors are separated, but you can keep both the same to approxiamte a global angular error
 
 % Systematic errors
-dcurve = 0.03; % dcurve*100 is [%]
-dfeed = 10; % [mm]
+dcurve = 0.01; % dcurve*100 is [%]
+dfeed = 5; % [mm]
 dbend = 0; % [o]
 drotate = 0; % [o]
 % Random errors
@@ -36,14 +36,14 @@ sigrotate = 0.25; % standard deviation [o]
 plotimperfect_curved(perfnodes,impnodes,curvenodes,1,0)
 
 %% STEP 3: Close fabrication defects in Abaqus with FIXED DISPLACEMENTS - OPTION 1 (used in AML paper)
-addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Accuracy Model\AbaqusFiles\Code\FixedDisplacements")
+addpath("C:\Users\harsh\OneDrive\Documents\GitHub\Bend-Forming\Accuracy Model\AbaqusFiles\Code\FixedDisplacements")
 [EnergytoCloseDefects, MaxMisesStress] = AbaqusFixedDisplacements(perfnodes,impnodes,curvenodes); % [J], [MPa]
 
 %% Close fabrication defects in Abaqus with SEQUENTIAL CONNECTORS - OPTION 2
-% addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Accuracy Model\AbaqusFiles\Code\SequentialConnectors")
+% addpath("C:\Users\harsh\OneDrive\Documents\GitHub\Bend-Forming\Accuracy Model\AbaqusFiles\Code\SequentialConnectors")
 % CLsequence = 1:numnodes(geulerbunny);
 % [EnergytoCloseDefects, MaxMisesStress] = AbaqusSequentialConnectors(perfnodes,impnodes,curvenodes,CLsequence); % [J], [MPa]
 
 %% Close fabrication defects in Abaqus with ALL SIMULTANEOUS CONNECTORS - OPTION 3
-% addpath("C:\Users\harsh\Documents\GitHub\Bend-Forming\Accuracy Model\AbaqusFiles\Code\AllConnectors")
+% addpath("C:\Users\harsh\OneDrive\Documents\GitHub\Bend-Forming\Accuracy Model\AbaqusFiles\Code\AllConnectors")
 % [EnergytoCloseDefects, MaxMisesStress] = AbaqusAllConnectors(perfnodes,impnodes,curvenodes); % [J], [MPa]

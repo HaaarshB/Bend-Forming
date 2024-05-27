@@ -13,7 +13,7 @@ For more information on Bend-Forming, see these published articles:
 - H.G. Bhundiya and Z.C. Cordero, "Bend-Forming: A CNC Deformation Process for Fabricating 3D Wireframe Structures," Additive Manufacturing Letters, 2023. https://doi.org/10.1016/j.addlet.2023.100146
 - H.G. Bhundiya, F. Royer, and Z. Cordero, "Engineering Framework for Assessing Materials and Processes for In-Space Manufacturing," J. of Materi. Eng. and Perform., 2022, 31(2). https://doi.org/10.1007/s11665-022-06755-y
 - H.G. Bhundiya, F. Royer, and Z. Cordero, “Compressive Behavior of Isogrid Columns Fabricated with Bend-Forming,” AIAA Scitech Forum 2022, January 3-7 (San Diego, CA & Virtual), AIAA, 2022. https://doi.org/10.2514/6.2022-2263
-- H.G. Bhundiya, J.Z. Zhang, K.D. Overby, F. Royer, J.H. Lang, Z.C. Cordero, W.F. Moulder, S.K. Jeon, and M.J. Silver, “Electrostatically Actuated X-Band Mesh Reflector with Bend-Formed Support Structure,” AIAA Scitech Forum 2023, January 23-27 (National Harbor, MD & Virtual), AIAA, 2023. https://doi.org/10.2514/6.2023-0756
+- J.Z. Zhang, H.G. Bhundiya, K.D. Overby, F. Royer, J.H. Lang, Z.C. Cordero, W.F. Moulder, S.K. Jeon, and M.J. Silver, “Electrostatically Actuated X-Band Mesh Reflector with Bend-Formed Support Structure,” AIAA Journal, 2024. https://doi.org/10.2514/1.A35914
 
 For the code on MathWorks File Exchange, see:
 
