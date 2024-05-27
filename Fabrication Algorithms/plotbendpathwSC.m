@@ -14,7 +14,7 @@ function plotbendpathwSC(geuler,eulerpath,pos,pausetime,savevideo,framerate,file
     end
     pospath = pos(eulerpath,:);
     figure()
-    pathplot = plot(geuler, 'XData', pos(:,1), 'YData', pos(:,2), 'Zdata', pos(:,3), 'NodeLabel', nodelabel);
+    pathplot = plot(geuler, 'XData', pos(:,1), 'YData', pos(:,2), 'Zdata', pos(:,3), 'NodeLabel', nodelabel, 'EdgeColor','k', 'LineWidth', 1, 'NodeColor','k');
     axis equal
     if savevideo
         set(gcf,'color','w');
@@ -44,12 +44,12 @@ function plotbendpathwSC(geuler,eulerpath,pos,pausetime,savevideo,framerate,file
             edgeindx = find(ismember(gedges,[nodeout,nodein],'rows'));
         end
         if ~ismember(edgepath,edgeindx(1))
-            highlight(pathplot,'Edges',edgeindx(1),'LineWidth',2)
+            highlight(pathplot,'Edges',edgeindx(1),'LineWidth',1.5)
             highlight(pathplot,'Edges',edgeindx(1),'EdgeColor','r')
             highlight(pathplot,eulerpath(i+1),'MarkerSize',10,'NodeColor','g')
             edgepath(i) = edgeindx(1);
         else
-            highlight(pathplot,'Edges',edgeindx(2),'LineWidth',2)
+            highlight(pathplot,'Edges',edgeindx(2),'LineWidth',1.5)
             highlight(pathplot,'Edges',edgeindx(2),'EdgeColor','r')
             highlight(pathplot,eulerpath(i+1))
             highlight(pathplot,eulerpath(i+1),'MarkerSize',10,'NodeColor','g')
