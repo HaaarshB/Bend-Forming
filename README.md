@@ -17,6 +17,6 @@ For more information on Bend-Forming, see these published articles:
 
 For the code on MathWorks File Exchange, see:
 
-https://www.mathworks.com/matlabcentral/fileexchange/111195-bend-forming-algorithms
+https://www.mathworks.com/matlabcentral/fileexchange/123360-bend-forming-algorithms
 
-© Copyright 2023
+© Copyright 2024
